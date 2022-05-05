@@ -35,3 +35,8 @@ Test automation repository with Coders Lab courses
     git pull origin [nazwa_brancha]
 ##### pobranie historii zmian bez mergowania:
     git fetch
+
+##### wypychanie zmian z requestem:
+    git push --set-upstream origin prework
+##### przełączanie się pomiędzy branchami:
+    git switch [nazwaBrancha]
