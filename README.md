@@ -1,37 +1,37 @@
 # Automation_repository
-## Test automation repository with Coders Lab courses
+Test automation repository with Coders Lab courses
 
-### Przydatne komendy GIT:
-##### klonowanie repo
+### Przydatne komendy GIT
+##### klonowanie repo:
     git clone [adres]
-##### branche lokalnego repo
+##### branche lokalnego repo:
     git branch
-##### branche lokalnego/zdalnego repo
+##### branche lokalnego/zdalnego repo:
     git branch -a
 
-##### tworzenie brancha
+##### tworzenie brancha:
     git branch [nazwaBrancha]
-##### przełączanie brancha
+##### przełączanie brancha:
     git checkout [nazwaBrancha]
-##### lub połączenie tworzenia i przełączenia brancha
+##### lub połączenie tworzenia i przełączenia brancha:
     git checkout -b [nazwaBrancha]
 
-##### wypychanie gałęzi do zdalnego repo
+##### wypychanie gałęzi do zdalnego repo:
     git push origin [nazwaBrancha]
-##### usuwanie brancha
+##### usuwanie brancha:
     git branch -d [nazwaBrancha]
 
-##### stan repo
+##### stan repo:
     git status
-##### dodanie plików do repo
+##### dodanie plików do repo:
     git add . lub git add -A
-##### zatwierdzenie/zapis commit zmian
+##### zatwierdzenie/zapis commit zmian:
     git commit -m ["opis zmian np. dodanie nowego pliku"]
 
-##### wypchnięcie historii zmian
+##### wypchnięcie historii zmian:
     git push origin [nazwa_brancha]
-##### pobranie historii zmian
+##### pobranie historii zmian:
     git pull
     git pull origin [nazwa_brancha]
-##### pobranie historii zmian bez mergowania
+##### pobranie historii zmian bez mergowania:
     git fetch
