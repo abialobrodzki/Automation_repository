@@ -29,14 +29,14 @@ Test automation repository with Coders Lab courses
     git commit -m ["opis zmian np. dodanie nowego pliku"]
 
 ##### wypchnięcie historii zmian:
-    git push origin [nazwa_brancha]
+    git push origin [nazwaBrancha]
 ##### pobranie historii zmian:
     git pull
-    git pull origin [nazwa_brancha]
+    git pull origin [nazwaBrancha]
 ##### pobranie historii zmian bez mergowania:
     git fetch
 
 ##### wypychanie zmian z requestem:
-    git push --set-upstream origin prework
+    git push --set-upstream origin [nazwaBrancha]
 ##### przełączanie się pomiędzy branchami:
     git switch [nazwaBrancha]
