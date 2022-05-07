@@ -2,6 +2,9 @@
 Test automation repository with Coders Lab courses
 
 ### Przydatne komendy GIT
+##### przemieszczanie się pomiędzy katalogami:
+    cd [nazwaFolderu]
+    cd ..
 ##### klonowanie repo:
     git clone [adres]
 ##### branche lokalnego repo:
