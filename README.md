@@ -1,6 +1,6 @@
 # Automation_repository
 Test automation repository with Coders Lab courses, included:
-- prework JAVA (first program; variables and operators; flow control; arrays) with automation tests to check tasks in file [Java Prework]
+- prework JAVA (first program; variables and operators; flow control; arrays) with automation tests to check tasks in file [Java_Prework]
 
 
 ### Przydatne komendy GIT
