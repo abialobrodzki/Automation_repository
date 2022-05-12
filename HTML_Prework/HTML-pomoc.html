@@ -10,8 +10,20 @@
 <body>
   <h1>Materiały HTML:</h1>
   <h2>Znaczniki HTML, struktura</h2>
-  <p>Znaczniki zamknięte: 'p' - fragment tekstu; 'h1' - tytuł na stronie; 'a' - odnośnik </p>
-  <p>Znaczniki puste: 'hr' ;  'br' ; 'img' ; 'input' ; 'base' ; 'col' </p>
+    <p>Znaczniki zamknięte: 'p' - fragment tekstu; 'h1' - tytuł na stronie; 'a' - odnośnik </p>
+    <p>Znaczniki puste: 'hr' ;  'br' ; 'img' ; 'input' ; 'base' ; 'col' </p>
+  <h2>Atrybuty</h2>
+    <input type="text" value="Tekst"> <!-- atrybuty w podwójnych cudzysłowach -->
+    <input type='text' value='Tekst'> <!-- dopuszczalne są też atrybuty w pojedynczych cudzysłowach -->
+    <input type='text' value=Tekst> <!-- spotykane są atrybuty bez cudzysłowów, ale nie jest to zalecane -->
+    <input type=text value="Tutaj cudzysłowy muszą być"> <!-- Przy wartościach będących wieloma wyrazami cudzysłowy są konieczne -->
+    <input type="text" readonly> <!-- atrybuty bez wartości -->
+    <input type="text" disabled> <!-- atrybuty bez wartości -->
+
+    <p class="text" data-id="top"> <!-- znacznik p z dwoma atrybutami -->
+        <img src="kot.jpg" width="200" height="300" alt="kot" title="Kotek"> <!-- znacznik img z kilkoma atrybutami -->
+    </p>
+
 
 </body>
 </html>
