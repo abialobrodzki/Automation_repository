@@ -12,10 +12,21 @@
 </head>
 <body>
 <!-- pomiędzy znacznikami "body" znajduje się właściwa treść strony, wyświetlana w przeglądarce -->
-  <h1>Materiały HTML:</h1> <!-- 'h1'-'h6' Nagłówki - od największej do najmniejszej czcionki -->
-  <h2>Znaczniki HTML, struktura</h2> 
+  <h1>Materiały HTML</h1> <!-- 'h1'-'h6' Nagłówki - od największej do najmniejszej czcionki -->
+  
+  <h6 id="spis_tresci">Spis treści: <ol> <!-- 'id' nagłówka dla hiperłącza -->
+    <li> <a href="#znaczniki">Znacznki</a> </li>
+    <li> <a href="#formatowanie_tekstu">Formatowanie tekstu</a> </li>
+    <li> <a href="#hiperlacza">Hiperłącza</a> </li>
+    <li> <a href="#atrybuty">Atrybuty</a> </li>
+    <li> <a href="#komentarze">Komentarze</a> </li>
+  </ol> </h6>
+  
+  <h4 id="znaczniki">Znaczniki HTML, struktura</h4> 
     <p>Znaczniki zamknięte: 'p' - fragment tekstu; 'h1' - tytuł na stronie; 'a' - odnośnik </p> <!-- 'p' Paragrafy - służą do grupowania tekstu w akapity -->
     <p>Znaczniki puste: 'hr' ;  'br' ; 'img' ; 'input' ; 'base' ; 'col' </p>
+  
+  <h4 id="formatowanie_tekstu">Formatowanie tekstu</h4>  
     <p>Znaki specjalne - zaczynają się znakiem ampersand'&', a kończą średnikiem';': nbsp:&nbsp; trade:&trade; lt:&lt; gt:&gt; copy:&copy; reg:&reg; alpha:&alpha; </p>
     <p>Nowa linia - przejście do nowej linii: 'br' <br> </p> <!-- 'br' - nowa linia -->
     <p>Indeks górny/dolny - indeks górny: 'sup' <sup>indeks górny</sup> indeks dolny: 'sub' <sub>indeks dolny<sub/> </p> <!-- 'sup' - indeks górny, 'sub' - indeks dolny -->
@@ -33,7 +44,31 @@
     <p>Lista nieuporządkowana - 'ul': <ul>Lista:<li>aaa</li><li>bbb</li><li>ccc</li></ul> </p> <!-- 'ul' - punktory -->
     <p>Lista uporządkowana - 'ol': <ol>Lista:<li>aaa</li><li>bbb</li><li>ccc</li></ol> </p> <!-- 'ol' - liczby -->
     <p>Lista definicji - 'dl': <dl>Lista:<dt>pojęcie a</dt><dd>aaa</dd><dt>pojęcie b i c</dt><dd>bbb</dd><dd>ccc</dd></dl> </p> <!-- 'dl': 'dt' + 'dd' - składa się z par pojęcie – definicja -->
-  <h2>Atrybuty</h2>
+  
+  <h4 id="hiperlacza">Hiperłącza</h4> 
+    <p>Hiperłącza zewnętrzne - 'href': <a href="https://google.pl">Przejdź do strony Google</a> </p> <!-- użytkownik przechodzi do innego serwisu, zaczynającego się od protokołu 'http' lub 'https' -->
+    <p>Hiperłącza wewnętrzne "podstrona" - 'href': <a href="info.html">Przeniosę na stronę info.html</a> </p> <!-- prowadzące do podstrony w ramach tej samej strony -->
+    <p>Hiperłącza wewnętrzne "kotwice" - 'href' + '#": <a href="#spis_tresci">Przejdź do spisu treści</a> </p> <!-- przenoszące do danej sekcji na tej samej podstronie -->
+    <p>przeniesie na stronę youtube.pl:  <code> .a href="http://youtube.pl". klik ./a. </code>
+    <p>przeniesie na podstronę kontakt.html:  <code> .a href="kontakt.html". klik ./a. </code>
+    <p>przeniesie do elementu o id równym "end":   <code> .a href="#end". klik ./a. </code>
+    <p>przeniesie na początek strony:  <code> .a href="#". klik ./a. </code>
+    <p>przeniesie do artykułu we wskazane miejsce:  <code> .a href="https://pl.wikipedia.org/wiki/HTML#Atrybuty". klik ./a. </code>
+    <p>atrybut 'rel': </p> <!-- stosowany na potrzeby pozycjonowania, określa jak powinien zachować się Googlebot indeksujący daną stronę -->
+    <ul>
+    <li>wartość: 'dofollow' (podążaj) – domyślna <code> .a href="http://www.coderslab.pl" rel="nofollow". nazwa_linka ./a. </code> </li>
+    <li>wartość 'nofollow' (nie podążaj) <code> .a href="http://www.coderslab.pl" rel="dofollow". nazwa_linka ./a. </code> </li>
+    </ul>
+    <p>atrybut 'target': </p> <!-- określa, czy dany link ma być otwarty w danej karcie czy w nowej -->
+    <ul>
+    <li>wartość: '_blank' – otwarcie strony w nowej karcie <code> .a href="http://inna-strona.html" target="_blank". klik ./a. </code> </li>
+    <li>wartość '_self' – otwarcie strony w tej samej karcie <code> .a href="http://inna-strona.html" target="_self". klik ./a. </code> </li>
+    <li>można dodać wartość 'noopener' <code> .a href="http://inna-strona.html" target="_blank" rel="noopener". klik ./a. </code> </li> <!-- strona otwarta w nowej karcie poprzez właściwość opener, nie odwoła się do tej poprzedniej, chroni to nas przed potencjalnym atakiem -->
+    </ul>
+    <p>pływająca ramka 'iframe': <code> .iframe src="https://www.coderslab.pl" width="100%" height="400". ./iframe. </code> <br> <iframe src="https://www.coderslab.pl" width="100%" height="400"></iframe> </p> <!-- (inline frame, ramka pływająca) umożliwia zawieranie dokumentu HTML wewnątrz innego dokumentu HTML -->
+
+
+  <h4 id="atrybuty">Atrybuty</h4>
     <input type="text" value="Tekst"> <!-- atrybuty w podwójnych cudzysłowach -->
     <input type='text' value='Tekst'> <!-- dopuszczalne są też atrybuty w pojedynczych cudzysłowach -->
     <input type='text' value=Tekst> <!-- spotykane są atrybuty bez cudzysłowów, ale nie jest to zalecane -->
@@ -44,7 +79,8 @@
     <p class="text" data-id="top"> <!-- znacznik p z dwoma atrybutami -->
         <img src="kot.jpg" width="200" height="300" alt="kot" title="Kotek"> <!-- znacznik img z kilkoma atrybutami -->
     </p>
-  <h2>Komentarze</h2>
+  
+  <h4 id="komentarze">Komentarze</h4>
     <nav> <!-- To jest przykładowy komentarz -->
     <ul>
       <li>Start</li>
