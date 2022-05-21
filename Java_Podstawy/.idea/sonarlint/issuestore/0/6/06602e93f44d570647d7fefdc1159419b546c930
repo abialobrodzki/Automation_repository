@@ -1,0 +1,14 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õôÉ8†Å¤¾0
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åºîˆ8¨¾0
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì–ÜÇÿÿÿÿÿ8³”¦¾0
+}
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "USD".(ì–ÜÇÿÿÿÿÿ8‚è¥¾0
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‘ºµ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ë¨Çœ
+n
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(üĞ–¢8î€·¾0
+N	java:S106"9Replace this use of System.out or System.err by a logger.(üĞ–¢
+s
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(Úö¿Âıÿÿÿÿ8ù€·¾0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Úö¿Âıÿÿÿÿ8Ì–¬¾0
