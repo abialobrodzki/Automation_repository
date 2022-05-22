@@ -1,0 +1,25 @@
+
+P
+java:S1854"5Remove this useless assignment to local variable "d".(²…‡şÿÿÿÿ
+P
+java:S1854"5Remove this useless assignment to local variable "c".(¥ìñÒùÿÿÿÿ
+P
+java:S1854"5Remove this useless assignment to local variable "x".(ìãËÒşÿÿÿÿ
+R
+java:S1854"7Remove this useless assignment to local variable "min".(Îáœûÿÿÿÿ
+P
+java:S1854"5Remove this useless assignment to local variable "a".(ûëêìùÿÿÿÿ
+A
+java:S1481"&Remove this unused "a" local variable.(ûëêìùÿÿÿÿ
+C
+java:S1481"(Remove this unused "min" local variable.(Îáœûÿÿÿÿ
+A
+java:S1481"&Remove this unused "x" local variable.(ìãËÒşÿÿÿÿ
+A
+java:S1481"&Remove this unused "c" local variable.(¥ìñÒùÿÿÿÿ
+=
+java:S2761""Remove multiple operator prefixes.(²…‡şÿÿÿÿ
+B
+java:S1125"'Remove the unnecessary boolean literal.(²…‡şÿÿÿÿ
+A
+java:S1481"&Remove this unused "d" local variable.(²…‡şÿÿÿÿ

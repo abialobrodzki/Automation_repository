@@ -3,6 +3,7 @@ Test automation repository with Coders Lab courses, included:
 - prework JAVA (first program; variables and operators; flow control; arrays) with automation tests to check tasks in file [Java_Prework]
 - prework HTML in file [HTML_Prework]
 - JAVA tasks (algorithms, arrays, debug, exceptions, methods) [Java_Podstawy]
+- JAVA OOP Object-Oriented Programming tasks (attributes,constructor,firstclass,inheritance,methods) [Java_Podstawy_OOP]
 
 
 ### Przydatne komendy GIT

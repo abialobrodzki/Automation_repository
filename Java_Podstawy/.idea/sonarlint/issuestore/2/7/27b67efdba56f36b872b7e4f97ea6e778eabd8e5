@@ -1,0 +1,15 @@
+
+K
+java:S1854"5Remove this useless assignment to local variable "c".(ƒ¼»¬
+P
+java:S1854":Remove this useless assignment to local variable "isTrue".(£¦ˆ
+N
+java:S1854"8Remove this useless assignment to local variable "text".(şùÓ
+?
+java:S1481")Remove this unused "text" local variable.(şùÓ
+=
+java:S1125"'Remove the unnecessary boolean literal.(£¦ˆ
+A
+java:S1481"+Remove this unused "isTrue" local variable.(£¦ˆ
+<
+java:S1481"&Remove this unused "c" local variable.(ƒ¼»¬
