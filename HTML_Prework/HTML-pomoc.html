@@ -19,7 +19,8 @@
     <li> <a href="#formatowanie_tekstu">Formatowanie tekstu</a> </li>
     <li> <a href="#hiperlacza">Hiperłącza</a> </li>
     <li> <a href="#obrazki">Obrazki</a> </li>
-
+    <li> <a href="#tabele">Tabele</a> </li>
+    ...
     <li> <a href="#atrybuty">Atrybuty</a> </li>
     <li> <a href="#komentarze">Komentarze</a> </li>
   </ol> </h6>
@@ -85,6 +86,55 @@
     </ul>
     </ul>
   
+  <h4 id="tabele">Tabele</h4>
+    <p>Znaczniki tabeli - 'table': <code>w nim zagnieżdżona jest cała tabela</code> </p>
+    <p>Znaczniki tabeli - 'tbody': <code>zawiera główne ciało tabeli</code> </p>
+    <p>Znaczniki tabeli - 'tr': <code>table row – rzędy tabeli</code> </p>
+    <p>Znaczniki tabeli - 'td': <code>table data – pojedyncze komórki</code> </p>
+    <p>Sekcje tabeli - 'thead': <code>sekcja z nagłówkiem tabeli</code> </p>
+    <p>Sekcje tabeli - 'tbody': <code>główne ciało tabeli</code> </p>
+    <p>Sekcje tabeli - 'tfoot': <code>stopka tabeli</code> </p>
+    <p>Łączenie komórek - 'colspan': <code>określa ile kolumn ma zajmować dana komórka ("szerokość")</code> </p>
+    <p>Łączenie komórek - 'rowspan': <code>określa ile wierszy ma zajmować dana komórka ("wysokość")</code> </p>
+    <p>Przykład tabeli: </p>
+    <table>
+        <thead>
+            <tr> <!-- Zawartość nagłówka tabeli: elementy th -->
+                <th colspan="4">Statystyki</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>  <!-- Zawartość ciała tabeli: elementy td -->
+                <th></th>
+                <th>Liczba użytkowników</th>
+                <th>Powrót</th>
+                <th>Wyjątki</th>
+            </tr>
+            <tr>
+                <th rowspan="3">Miesiąc</th>
+                <td>Styczeń</td>
+                <td>Luty</td>
+                <td>Marzec</td>
+            </tr>
+            <tr>
+                <td>14100</td>
+                <td>100</td>
+                <td>11000</td>
+            </tr>
+            <tr>
+                <td>14100</td>
+                <td>100</td>
+                <td>11000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr> <!-- Zawartość stopki tabeli: element td -->
+                <th colspan="4">Podsumowanie</th>
+            </tr>
+        </tfoot>
+    </table>
+
+
 
 
   <h4 id="atrybuty">Atrybuty</h4>
