@@ -15,16 +15,18 @@
   <h1>Materiały HTML</h1> <!-- 'h1'-'h6' Nagłówki - od największej do najmniejszej czcionki -->
   
   <h6 id="spis_tresci">Spis treści: <ol> <!-- 'id' nagłówka dla hiperłącza -->
-    <li> <a href="#znaczniki">Znacznki</a> </li>
+    <li> <a href="#znaczniki">Znaczniki</a> </li>
     <li> <a href="#formatowanie_tekstu">Formatowanie tekstu</a> </li>
     <li> <a href="#hiperlacza">Hiperłącza</a> </li>
     <li> <a href="#obrazki">Obrazki</a> </li>
     <li> <a href="#tabele">Tabele</a> </li>
     <li> <a href="#e.linioweiblokowe">Elementy liniowe i blokowe</a> </li>
     <li> <a href="#identyfikatoryiklasy">Identyfikatory i klasy</a> </li>
-    ...
     <li> <a href="#atrybuty">Atrybuty</a> </li>
     <li> <a href="#komentarze">Komentarze</a> </li>
+    <li> <a href="#CSS">CSS kaskadowe arkusze stylów</a> </li>
+    
+
   </ol> </h6>
   
   <h4 id="znaczniki">Znaczniki HTML, struktura</h4> 
@@ -223,7 +225,8 @@
     < /a> <br>
     < p id="text">Paragraf z identyfikatorem< /p> <br>
     </code>
-   </p> Klasy 'class':
+   </p> 
+   <p> Klasy 'class':
     <code> pozwalają odróżnić poszczególne elementy dokumentu HTML. Klasy idealnie przydają się do stylowania elementów. <br>
     Przykłady: <br>
     < h2 class="my-element"> < /h2> <br>
@@ -236,8 +239,6 @@
     < button class="btn btn-secondary btn-big">Klik < /button> <br>
     </code>
    </p>
-
-
 
   <h4 id="atrybuty">Atrybuty</h4>
     <input type="text" value="Tekst"> <!-- atrybuty w podwójnych cudzysłowach -->
@@ -270,7 +271,215 @@
     </div>
     </nav>
 
+  <h4 id="CSS">CSS kaskadowe arkusze stylów</h4>
+   <p> Struktura CSS: <br>
+    <code>
+    p {  //selektor wskazujący na elementy na stronie <br>
+    color: red; //właściwości:wartości właściwości <br>
+    font-size: 20px; <br>
+    border: 2px solid blue; <br>
+    } <br>
+    </code>
+    Najczęściej wykorzystywane selektory to znaczniki, id i klasy. <br>
+   </p>
+   <p> Po złapaniu elementu selektorem nadajemy mu wygląd właściwościami: <br>
+    <code>
+    /* wszystkie p */ <br>
+    p { <br>
+    margin-bottom: 20px; <br>
+    } <br>
 
+    /* element o unikalnym atrybucie id="element" */ <br>
+    #element { <br>
+    color: red; <br>
+    padding: 20px 0; <br>
+    } <br>
+
+    /* wszystkie elementy o klasie class="test" */ <br>
+    .test { <br>
+    color: blue; <br>
+    margin: 20px 0; <br>
+    border: 2px solid #ddd; <br>
+    } <br>
+    </code>
+   </p>
+   <p> Stylowanie po id jest możliwe i działa tak jak po innych selektorach, ale nie jest to najlepsza praktyka. <br>
+    <code>
+        HTML: <br>
+        < p id="testP"> <br>
+            lorem ipsum sit dolor <br>
+        < /p> <br>
+
+        < div id="element"> <br>
+            lorem ipsum sit dolor <br>
+        < /div> <br>
+
+        CSS: <br>
+        #testP { <br>
+        color: red; <br>
+        } <br>
+
+        #element { <br>
+        padding: 10px 0; <br>
+        color: blue; <br>
+        } <br>
+    </code>
+    </p>
+    <p> W przeciwieństwie do id, jedną klasę może mieć wiele elementów. W praktyce CSS oznacza to, że dane stylowanie możemy dać wielu elementom jednocześnie. <br>
+    <code>
+        HTML: <br>
+        < h2 class="content"> <br>
+            lorem ipsum dolor sit <br>
+        < /h2> <br>
+        < p class="content"> <br>
+            lorem ipsum dolor sit <br>
+        < /p> <br>
+        < p class="content"> <br>
+            lorem ipsum dolor sit <br>
+        < /p> <br>
+
+        CSS: <br>
+        .content { <br>
+            font-size: 16px; <br>
+            font-family: sans-serif; <br>
+            color: blue; <br>
+            font-weight: bold; <br>
+            margin: 20px 0; <br>
+            border: 1px solid #ddd; <br>
+            padding: 20px; <br>
+        } <br>
+    </code>
+    </p>
+    <p> <ul> Stylowanie można dołączyć do naszej strony na trzy sposoby:
+            <li> stylowanie inline w atrybucie style elementu (inline) - nie zalecane </li>
+                <code>
+                    < div style="color: red; font-size: 20px; font-weight: bold;"> <br>
+                        Przykładowy styl <br>
+                    < /div> <br>
+                    Takie stylowanie może być akceptowalne, gdy chcemy ukryć dany element: <br>
+                    < div style="display: none;"> < /div> <br>
+                </code>
+            <li> wewnątrz znacznika < style> (internal) </li>
+                <code>
+                    Znacznik style możemy umieszczać w sekcji head lub body. Zaleca się umieszczać go w sekcji head, dzięki czemu style szybciej zostaną wczytane i zaaplikowane na stronie: <br>
+                        < !doctype html> <br>
+                        < html lang="pl-PL"> <br>
+                        < head> <br>
+                            ... <br>
+                        < style> <br>
+                            body { <br>
+                                margin: 20px; <br>
+                            } <br>
+                            .element { <br>
+                            width: 100px; <br>
+                            height: 100px; <br>
+                            border: 1px solid red; <br>
+                            margin-bottom: 20px; <br>
+                            } <br>
+                        < /style> <br>
+                        < /head> <br>
+                        < body> <br>
+                            < div class="element">< /div> <br>
+                            < div class="element">< /div> <br>
+                            < div class="element">< /div> <br>
+                        < /body> <br>
+                        < /html> <br>
+                </code>
+            <li> dołączenie oddzielnego pliku ze stylami (external) </li>
+                <code>
+                    Plik ze stylami dołączamy do strony używając znacznika link. Powinien on nosić rozszerzenie .css. Element < link> importuje zewnętrzne pliki na stronę – w tym przypadku importuje arkusz CSS. Składa się z następujących atrybutów: <br>
+                    - Atrybut rel (relation, związek) określa, jakiego typu jest importowany plik, dla CSS będzie miał wartość stylesheet ( arkusz stylów): rel="stylesheet". <br>
+                    - Atrybut href (hypertext reference, odniesienie w hipertekście) określa położenie importowanego pliku: href="style.css". <br>
+                    HTML: <br>
+                        < !-- stronaX.html --> <br>
+                        < !doctype html> <br>
+                        < html lang="pl-PL"> <br>
+                        < head> <br>
+                        < title>Podstrona X< /title> <br>
+                        < link rel="stylesheet" href="style.css"> <br>
+                        < /head> <br>
+                        < body> <br>
+                        < div class="element">< /div> <br>
+                        < /body> <br>
+                        < /html> <br>
+                    CSS: <br>
+                        /* plik style.css */ <br>
+                        body { <br>
+                        background: #eee; <br>
+                        margin: 0; <br>
+                        padding: 30px; <br>
+                        } <br>
+                        .element { <br>
+                        border: 2px solid #aaa; <br>
+                        margin-bottom: 20px; <br>
+                        background: #eee;<br>
+                        padding: 20px; <br>
+                        } <br>
+                </code>
+        </ul>
+    </p>
+   <p> Zagnieżdzanie i dziedziczenie - jeżeli znacznik jest zagnieżdżony w innym znaczniku, to przejmuje on niektóre jego style. W praktyce, z właściwości używanych na co dzień dziedziczone są tylko te odpowiedzialne za tekst. <br>
+   <code>
+   CSS: <br>
+   .parent-element { <br>
+    /* związane z tekstem - dziedziczone */ <br>
+    color: red; <br>
+    font-size: 20px; <br>
+    text-transform: uppercase; <br>
+    letter-spacing: 5px; <br>
+    /* nie związane z tekstem - nie dziedziczone */ <br>
+    border: 1px solid red; <br>
+    background: #ddd; <br>
+    margin: 10px; <br>
+    padding: 20px; <br>
+   } <br>
+   HTML: <br>
+   < div class="parent-element"> <br>
+    < div> <br>
+     < div> <br>
+       < strong>Kocham < span>dziedziczenie < /span>< /strong> <br>
+     < /div> <br>
+    < /div> <br>
+   < /div> <br>
+   </code>
+   </p>
+   <p> Kaskadowość - aplikowanie wspólnego stylowania, które pochodzi z różnych miejsc. Podczas aplikowania stylów przeglądarka sprawdza, czy dany selektor CSS pasuje do danego elementu i czy ma odpowiednią moc. Jeżeli tak się dzieje, style do danego elementu są aplikowane. <br>
+   <code>
+   /* plik style1.css */ <br>
+    p { <br>
+    color: #222; <br>
+    } <br>
+   /* plik style2.css */ <br>
+    p { <br>
+    padding: 20px; <br>
+    background: red; <br>
+    } <br>
+    < !-- plik html --> <br>
+    < style> <br>
+        p { <br>
+        margin: 20px 0; <br>
+        } <br>
+    < /style> <br>
+    < p> <br>
+    Przykładowy tekst, który dostanie wszystkie powyższe style <br>
+    < /p> <br>
+   </code>
+   </p>
+   <p> Podczas aplikowania styli, kolejne deklaracje mogą wcześniejsze deklaracje nadpisywać, mogą też coś dodawać własnego: <br>
+    <code>
+        CSS: <br>
+        p { <br>
+        color: #222; <br>
+        } <br>
+        p { <br>
+        color: white; /* nadpisaliśmy powyższą deklarację */ <br>
+        padding: 20px; /* dodaliśmy coś nowego */ <br>
+        background: blue; <br>
+        } <br>
+        HTML: <br>
+        < p>Przykładowy tekst < /p> <br>
+    </code>
+   </p>
 
 
 </body>
