@@ -25,7 +25,7 @@
     <li> <a href="#atrybuty">Atrybuty</a> </li>
     <li> <a href="#komentarze">Komentarze</a> </li>
     <li> <a href="#CSS">CSS kaskadowe arkusze stylów</a> </li>
-    
+    <li> <a href="#boxmodel">Box model</a> </li>
 
   </ol> </h6>
   
@@ -480,6 +480,362 @@
         < p>Przykładowy tekst < /p> <br>
     </code>
    </p>
+
+  <h4 id="boxmodel">Box model</h4>
+  <p> Każdy element na stronie można traktować jak swego rodzaju pudełko – stąd określenie box model. Są pudełka, które dostosowują się do swojej zawartości i układają się obok siebie (inline), są też pudełka, które domyślnie zajmują całą szerokość i układają się jeden pod drugim. Układanie się elementów określa się jako flow dokumentu. <br>
+  <ul> Właściwość display może przyjąć wiele wariantów:
+    <li> <code>block</code> element jest jeden w danej linii, można mu nadawać wymiary i marginesy, </li>
+    <li> <code>inline</code> elementy wyświetlają się w linii, nie można nadać im wymiarów i pionowych marginesów, </li>
+    <li> <code>inline-block</code> coś pomiędzy inline a block, układa się obok siebie w linii, a jedncześnie można mu nadać wymiary i marginesy, </li>
+    <li> <code>none</code> wyłącza wyświetlanie elementu wraz z elementami w jego wnętrzu. </li>
+  </ul>
+  Poza trzema głównymi typami mamy też bardziej "specjalne": <code>list-item</code>, <code>compact</code>, <code>run-in</code>, <code>table</code>, <code>table-caption</code>, <code>table-cell</code>, <code>table-row</code>, <code>table-row-group</code>, <code>table-column</code>, <code>table-column-group</code>, <code>inline-table</code>, <code>flex</code>, <code>inline-flex</code>, <code>grid</code>, <code>inline-grid</code>. <br>
+  Przykład użycia 'display': <br>
+  <code>
+    p { <br>
+    display: block; /* na całą szerokość, jeden w linii */ <br>
+    } <br>
+    div { <br>
+    display: inline; /* tylko tyle ile potrzebuje kontent, wiele w jednej linii */ <br>
+    } <br>
+    h1 { <br>
+    display: none; /* element nie będzie wyświetlany */ <br>
+    } <br>
+  </code>
+  Każdy element na stronie można uznać za swoiste pudełko, któremu możesz nadać pewne właściwości. Kilka z nich określa jego rozmiary: <br>
+  <ul>
+    <li><code>margin</code> odległość od otaczających go elementów (dla inline działają tylko poziome)</li>
+    <li><code>border</code> obramowanie danego elementu</li>
+    <li><code>width</code> i <code>height</code> określają jego wymiary (pamiętaj: nie działają dla elementów typu inline) </li>
+    <li><code>padding</code> czyli odstęp wewnętrzny od krawędzi danego elementu </li>
+  </ul>
+  <img src="box-model.png" width="200" height="160" alt="Box model" title="Box model"> <br>
+  Width i height - domyślnie każdy element na stronie ma szerokość i wysokość ustawioną na auto. Dla elementów blokowych oznacza to „całą możliwą szerokość” (nie jest to równoznaczne z width 100%). <br>
+  <code>
+    CSS: <br>
+    .parent { <br>
+    border: 1px solid #ddd; <br>
+    } <br>
+    .child1 { /* nie ustawiamy width więc ma ona auto */ <br>
+    height: 20px; <br>
+    background: red; <br>
+    margin: 10px; <br>
+    color: #fff; <br>
+    font-family: sans-serif; <br>
+    } <br>
+    .child2 { <br>
+    height: 20px; <br>
+    background: blue; <br>
+    width: 100%; /* ustawiam width na 100% */ <br>
+    margin: 10px; <br>
+    color: #fff; <br>
+    font-family: sans-serif; <br>
+    } <br>
+  </code>
+  <img src="width-height.png" width="800" height="150" alt="Width and Height" title="Width and Height"> <br>
+  Margin - odpowiada za odstęp danego elementu od innych, otaczających go elementów. <br>
+  Przykłady deklaracji: <br>
+  <code>
+    CSS: <br>
+    /* 'użycie właściwości specyficznych' dla każdej strony elementu oddzielnie*/ <br>
+    .element1 { <br>
+    margin-top: 10px; <br>
+    margin-right: 20px; <br>
+    margin-bottom: 30px; <br>
+    margin-left: 40px; <br>
+    } <br>
+    /* 'shorthand' - z każdej strony inny odstęp - góra, prawo, dół, lewo - jak wskazówki zegara */ <br>
+    .element4 { <br>
+    margin: 10px 20px 30px 40px; <br>
+    padding: 10px 20px 30px 40px; /* góra 10px, prawo 20px, dół 30px, lewo 40px */ <br>
+    } <br>
+    /* połączenie technik - element ma 10px z każdej strony, ale z dołu 50px */ <br>
+    .element { <br>
+    margin: 10px; <br>
+    margin-bottom: 50px; <br>
+    } <br>
+    /* centrowanie w poziomie 'margin: 0 auto' */ <br>
+    .element { <br>
+    width: 500px; <br>
+    margin: 0 auto; <br>
+    } <br>
+  </code>
+  Shorthand - poza skróceniem zapisu, również nadpisuje (a w zasadzie cofa do stanu domyślnego) wcześniej użyte specyficzne właściwości danego typu. <br>
+  <code>
+    CSS: <br>
+    .element { <br>
+    margin-bottom: 20px; <br>
+    margin-top: 20px; <br>
+    margin: 10px; /* powyższe właściwości zostały nadpisane/cofnięte do wartości domyślnych */ <br>
+
+    background-color: red; <br>
+    background-image: url(...); <br>
+    background-size: cover; <br>
+    background: blue; /* nadpisaliśmy wszystkie powyższe zerując je do stanu początkowego */ <br>
+
+    font-family: sans-serif; <br>
+    font-size: 20px; <br>
+    font-weight: bold; <br>
+    line-height: 2em; <br>
+    font: 30px Arial, sans-serif; /* shorthand nadpisał powyższe właściwości dotyczące fonta */ <br>
+    } <br>
+  </code>
+  Shorthand nie działa w drugą stronę, jeżeli nawet nie znamy konkretnej składni zapisu, możemy użyć skróconego zapisu, a następnie dodać konkretne rzeczy, których nam brakuje: <br>
+  <code>
+    CSS: <br>
+    .element { <br>
+    margin: 10px; <br>
+    margin-bottom: 30px; <br>
+
+    font: 20px Arial, sans-serif; <br>
+    font-weight: bold; <br>
+    } <br>
+  </code>
+  Z marginesami wiążą się 2 dziwne zachowania.<br>
+  Pierwsze z nich to to, że pionowe marginesy dwóch elementów nie sumują się, a brany jest pod uwagę ten większy (tylko marginesy pionowe). <br>
+  <img src="margin.png" width="200" height="200" alt="Margin" title="Margin"> <br>
+  <img src="margin-horizontal.png" width="350" height="100" alt="Margin horizontal" title="Margin horizontal"> <br>
+  Drugie tyczy się elementów zagnieżdżonych w innych elementach. Domyślnie, jeżeli dziecko elementu ma margines, nie odsuwa on tego dziecka od krawędzi rodzica, a odsuwa samego rodzica. <br>
+  <img src="margin-parent.png" width="300" height="200" alt="Margin parent" title="Margin parent"> <br>
+  Są na to rozwiązania. Wystarczy rodzicowi dać właściwość <code>overflow: hidden</code> lub dziecku dać <code>padding</code> zamiast marginesu. <br>
+  Padding - określa wewnętrzny odstęp danego elementu od własnej krawędzi. <br>
+  <code>
+    CSS: <br>
+    .element1 { <br>
+    border: 1px solid #333; <br>
+    background: gold; <br>
+    color: red; <br>
+    } <br>
+    .element2 { <br>
+    border: 1px solid #333; <br>
+    background: gold; <br>
+    color: red; <br>
+    padding: 20px; <br>
+    } <br>
+    HTML: <br>
+    < div class="element1"> <br>
+    Przykładowy tekst <br>
+    < /div> <br>
+    < div class="element2"> <br>
+    Przykładowy tekst <br>
+    < /div> <br>
+  </code>
+  <img src="padding.png" width="500" height="150" alt="Padding" title="Padding"> <br>
+  Border - opisuje, jak ma się zachować obramowanie elementu. <br>
+  Składa się on z 3 właściwości, które musimy ustawić dla elementu, aby nadać mu border:
+  <ul>
+    <li><code>border-width</code> właściwość ta określa grubość bordera, można ją nadawać dla całego elementu za pomocą właściwości <code>border-width</code> lub dla każdego boku z osobna: <br>
+        <code>
+        CSS: <br>
+        .element1 { <br>
+            border-width: 10px; <br>
+        } <br>
+        /* ta sama zasada co przy marginesach - kierunek wskazówek zegara */ <br>
+        .element2 { <br>
+            border-width: 10px 20px 30px 40px; <br>
+        } <br>
+        .element3 { <br>
+            border-top-width: 10px; <br>
+            border-right-width: 20px; <br>
+            border-bottom-width: 30px; <br>
+            border-left-width: 40px; <br>
+        } <br>
+        </code>
+    </li>
+    <li><code>border-style</code> ustawia kolor bordera, tak jak przy szerokości, kolor można ustawić zbiorczo dla wszystkich boków albo dla każdego boku indywidualnie: <br>
+        <code>
+        CSS: <br>
+        div { <br>
+            border-width: 10px; <br>
+            border-style: solid; <br>
+            width: 100px; <br>
+            height: 100px; <br>
+            margin: 10px; <br>
+        } <br>
+        .element1 { <br> 
+            border-color: red; <br>
+        } <br>
+        .element2 { <br>
+            border-color: red blue green yellow; <br>
+        } <br>
+        .element3 { <br>
+            border-top-color: red; <br>
+            border-right-color: blue; <br>
+            border-bottom-color: green; <br>
+            border-left-color: yellow; <br>
+        } <br>
+        </code>
+    </li>
+    <li><code>border-color</code> ostatnia właściwość wymagana do działania bordera to <code>border-style</code>, który określa styl obramowania: <br>
+        <code>
+        CSS: <br>
+        div { <br>
+            border-width: 2px; <br>
+            border-color: red; <br>
+            width: 100px; <br>
+            height: 100px; <br>
+            margin: 10px; <br>
+        } <br>
+        .element-1 { <br>
+            border-style: solid; <br>  
+        } <br>
+        .element-2 { <br>  
+            border-style: solid dotted dashed double; <br>
+        } <br>
+        .element-3 { <br>
+            border-top-style: solid; <br>
+            border-right-style: dotted; <br>
+            border-bottom-style: dashed; <br>
+            border-left-style: double; <br> 
+        } <br>
+        </code>
+    </li>
+  </ul>
+  W większości przypadków takie długie deklaracje jak powyżej nie są używane, ponieważ są niepraktyczne. Zamiast nich stosowany jest skrócony zapis: <br>
+  <code>
+    CSS: <br>
+    .element1 { <br>
+        border: 2px solid red; <br>
+    } <br>
+    .element2 { <br>
+        border: 2px dashed blue; <br>
+    } <br>
+    .element3 { <br>
+        border: 2px dotted green; <br>
+    } <br>
+  </code>
+  Powyższe przykłady pokazują specyficzną cechę rysowania borderów. Gdy obramowanie otrzyma różne kolory, krawędzie stykają się pod kątem – jak ramy obrazu. Można to wykorzystać w wielu sytuacjach jak np. rysowanie kształtów czy robienie grotów strzałek: <br>
+  <code>
+    CSS: <br>
+    .arrow1 { <br>
+        width: 10px; <br>
+        height: 10px; <br>
+        border-top: 5px solid red; <br>
+        border-right: 5px solid red; <br>
+        transform: rotate(-45deg); <br>
+    } <br>
+    .arrow2 { <br>
+        width: 0; <br>
+        height: 0; <br>
+        border: 10px solid yellow; /*transparent*/ <br>
+        border-bottom-color: red; <br>
+    } <br>
+    .arrow3 { <br>
+        width: 0; <br>
+        height: 0; <br>
+        border: 10px solid yellow; /*transparent*/ <br>
+        border-bottom-color: red; <br>
+        border-right-color: red; <br>
+    } <br>
+  </code>
+  Końcową wielkość boksa można obliczyć według wzoru: <br>
+  <code> realWidth = width + padding-left + padding-right + border-left-width + border-right-width </code> <br>
+  <code> realHeight = height + padding-top + padding-bottom + border-top-width + border-bottom-width </code> <br>
+  Do takich rozmiarów trzeba jeszcze dodać marginesy, które odsuwają dany element od otaczających go elementów. <br>
+  <img src="box-model-div.png" width="200" height="150" alt="Box model" title="Box model"> <br>
+  'Box-sizing' pozwala przestawić wyliczanie wielkości elementów w dwa tryby: <br>
+  <ul>
+    <li><code>box-sizing: border-box</code> - border i padding liczone są do środka elementu, rozmiar elementu się nie zmienia</li>
+    <li><code>box-sizing: content-box</code> - border i padding liczone są na zewnątrz elementu, rozmiar elementu sie zmienia</li>
+  </ul>
+  Przykład: <br>
+  <code>
+    CSS: <br>
+    div { <br>
+        width: 200px; <br>
+        height: 200px; <br>
+        background: red; <br>
+        color: #fff; <br>
+        margin: 20px; <br>
+    } <br>
+    .elementb1 { <br>
+        box-sizing: border-box; <br>
+    } <br>
+    .elementb2 { <br> 
+        padding: 20px; <br>
+        box-sizing: border-box; <br>
+    } <br>
+    .elementb3 { <br>
+        padding: 20px; <br>
+        border: 20px solid black; <br>
+        box-sizing: border-box; <br>
+    } <br>
+  </code>
+  Takie wyliczanie rozmiarów elementów na stronach jest tak naturalne, że większość autorów w dzisiejszych czasach rozpoczyna swoje stylowanie od linijek: <br>
+  <code>
+    * { <br>
+        box-sizing: border-box; <br>
+    } <br>
+  </code>
+  'Overflow' pozwala kontrolować zachowanie elementu wobec niemieszczącej się zawartości. Możliwe wartości to: <br>
+  <ul>
+    <li><code>hidden</code> – zawartość niewidoczna poza elementem <br> Wartość hidden oznacza: "przytnij wszystko, co wychodzi poza element": <br>
+        <code>
+            CSS: <br>
+            .element { <br>
+                padding: 20px; <br>
+                background: yellow; <br>
+                color: red; <br>
+                margin: 20px; <br>
+                width: 200px; <br>
+                height: 200px; <br>
+                overflow: hidden; <br>
+            } <br>
+        </code>
+    </li>
+    <li><code>auto</code> – jeżeli treść się nie mieści pojawią się paski przewijania <br> Wartość auto oznacza: "jeżeli zawartość się nie mieści, pokaż paski przewijania. Jeżeli zawartość się mieści, nie rób nic": <br>
+        <code>
+            CSS: <br>
+            .element { <br>
+                padding: 20px; <br>
+                background: yellow; <br>
+                color: red; <br>
+                margin: 20px; <br>
+                width: 200px; <br>
+                height: 200px; <br>
+                overflow: auto; <br>
+            } <br>
+        </code>
+    </li>
+    <li><code>scroll</code> – paski przewijania są widoczne zawsze <br> Wartość scroll oznacza: „pokaż paski przewijania – bez względu na to, czy zawartość się mieści, czy nie”: <br>
+        <code>
+            CSS: <br>
+            .element { <br>
+                padding: 20px; <br>
+                background: yellow; <br>
+                color: red; <br>
+                margin: 20px; <br>
+                width: 200px; <br>
+                height: 200px; <br>
+                overflow: scroll; <br>
+            } <br>
+        </code>
+    </li>
+    <li><code>visible</code> – domyślna – widoczna poza elementem</li>
+    <li><code>inherit</code> – dziedziczy zachowanie od rodzica</li>
+  </ul>
+  Kontrolowanie 'overflow' dla danych osi, możemy skorzystać z dodatkowych właściwości:<code>overflow-x</code> (pozioma) i <code>overflow-y</code> (pionowa): <br>
+  <code>
+    CSS: <br>
+    .element { <br>
+        padding: 20px; <br>
+        background: yellow; <br>
+        color: red; <br>
+        margin: 20px; <br>
+        width: 200px; <br>
+        height: 200px; <br>
+  
+        overflow: hidden !important; /* wymuszamy schowanie przewijania */ <br>
+        overflow-y: auto !important; /* jeżeli zajdzie potrzeba pojawią się paski na osi Y */ <br>
+    } <br>
+  </code>
+  Przydatność overflow: <br>
+  <ul>
+    <li>jeśli rodzicowi nadasz overflow: hidden, jego dzieci nie odsuną go swoimi marginesami</li>
+    <li>jeśli rodzicowi nadasz overflow: hidden, możesz nim naprawić problem z floatami</li>
+    <li>overflow: hidden może się przydać do ukrywania tekstu na elementach – np. gdy dany element ma tło z tekstem, który nie musi być widoczny w całości</li>
+  </ul>
+  </p>
 
 
 </body>
