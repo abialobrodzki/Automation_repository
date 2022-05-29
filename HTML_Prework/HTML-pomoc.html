@@ -26,6 +26,7 @@
     <li> <a href="#komentarze">Komentarze</a> </li>
     <li> <a href="#CSS">CSS kaskadowe arkusze stylów</a> </li>
     <li> <a href="#boxmodel">Box model</a> </li>
+    <li> <a href="#formularze">Projektowanie formularzy</a> </li>
 
   </ol> </h6>
   
@@ -837,6 +838,242 @@
   </ul>
   </p>
 
+  <h4 id="formularze">Projektowanie formularzy</h4>
+  <p>
+    Wszystkie pola formularza powinny być objęte elementem 'form', który w HTML służy do definiowania formularza. <br>
+    <code>< form>...< /form></code><br>
+    Znacznik <code>form</code> może przyjąć kilka atrybutów. Wśród nich wyróżniamy:<br>
+    <ul>
+        <li><code>action</code> – wskazuje na adres, na który zostanie wysłany formularz</li>
+        <li><code>method</code> – wskazuje metodę, jaką zostanie wysłany formularz (get, post)</li>
+    </ul>
+   Przykład: <br>
+   <code>< form action="http://nasza-domena.pl/skrypt-na-serwerze.php" method="get">...< /for></code><br>
+   Elementy formularza - każdy formularz składa się z licznych elementów (kontrolek). Pozwalają one na pobieranie różnych danych od użytkownika. <br>
+   Oto najpopularniejsze typy elementów: <br>
+   <ul>
+    <li><code>input</code> – pole tekstowe do wpisywania treści (może występować w kilku rodzajach)</li>
+    <li><code>radio</code> – pole do wyboru jednej z opcji</li>
+    <li><code>checkbox</code> – pole do wyboru kilku opcji</li>
+    <li><code>textarea</code> – pole do wpisywania dłuższej treści</li>
+    <li><code>select</code> – pole do wyboru opcji</li>
+    <li><code>range</code> – pole do wyboru wartości z zakresu</li>
+    <li><code>button</code> – przyciski w formularzach</li>
+    </ul>
+    Przykład zastosowania pól: <br>
+    <code>
+        < form><br>
+            < label for="text">Pole tekstowe< /label><br>
+            < input type="text" id="text" /><br>
+
+            < label for="email">Pole tekstowe< /label><br>
+            < input type="email" id="email" /><br>
+
+            < label for="number">Pole tekstowe< /label><br>
+            < input type="number" id="number" /><br>
+
+            < label for="date">Pole tekstowe< /label><br>
+            < input type="date" id="date" /><br>
+
+            < label for="url">Pole tekstowe< /label><br>
+            < input type="url" id="url" /><br>
+
+            < label for="password">Pole tekstowe< /label><br>
+            < input type="password" id="password" /><br>
+
+            < input type="range" id="range" /><br>
+
+            < input type="radio" id="radio" /><br>
+            < label for="range">Pole radio< /label><br>
+
+            < input type="checkbox" id="chk" /><br>
+            < label for="chk">Pole checkbox< /label><br>
+
+            < label for="textarea">Pole textarea< /label><br>
+            < textarea id="textarea">< /textarea><br>
+
+            < label for="select">Pole select< /label><br>
+            < select id="select"><br>
+                < option>Opcja 1< /option><br>
+                < option>Opcja 2< /option><br>
+                < option>Opcja 3< /option><br>
+            < /select><br>
+
+            < button type="submit">Wyślij< /button><br>
+        </ form><br>
+    </code>
+    Label - jest to element, w którym opisujemy, co użytkownik powinien wpisać w dane pole. Elementu tego możesz używać na 2 sposoby.<br>
+    W pierwszym z nich używamy atrybutu <code>for</code>, gdzie podajemy ID pola, którego dany label się tyczy:<br>
+    <code>
+        < form><br>
+            < label for="name">Wpisz swoje imię< /label><br>
+            < input type="text" id="name" /><br>
+            < /form><br>
+    </code>
+    Drugi sposób polega na umieszczeniu tekstu i pola wewnątrz labela:<br>
+    <code>
+        < form><br>
+            < label><br>
+                Wpisz swoje imię<br>
+                < input type="text" /><br>
+            < /label><br>
+        < /form><br>
+    </code>
+    Atrybut name - każdy element w formularzu (uniklany w jego zakresie) powinien mieć atrybut <code>name</code>, czyli nazwę pola. Wartość danego pola zostanie wysłana na serwer właśnie pod taką nazwą: <br>
+    <code>
+        < form><br>
+            < label for="name">Wpisz swoje imię< /label><br>
+            < input type="text" id="name" name="name" /><br>
+
+            < label for="surname">Wpisz swoje nazwisko< /label><br>
+            < input type="text" id="surname" name="surname" /><br>
+        < /form><br>
+    </code>
+  Atrybut placeholder - element dodatkowo wyjaśniający użytkownikowi co i jak ma wpisać w dane pole. Tekst ten zniknie, gdy użytkownik wpisze coś do pola: <br>
+  <code>
+    < form><br>
+        < label for="user">Wpisz swoje imię< /label><br>
+        < input type="text" id="name" name="name" placeholder="Wpisz swoje imię" /><br>
+
+        < label for="surname">Wpisz swoje nazwisko< /label><br>
+        < input type="text" id="surname" name="surname" placeholder="Wpisz swoje nazwisko" /><br>
+    < /form><br>
+  </code>
+  Atrybut value - oznacza wartość danego pola, czyli to, co wybrał lub co wpisał w dane pole użytkownik: <br>
+  <code>
+    < form><br>
+        < label for="user">Wpisz swój login< /label><br>
+        < input type="text" id="user" name="user" placeholder="Wpisz swój login" value="Paweł" /><br>
+
+        < label for="pass">Wpisz swoje hasło< /label><br>
+        <   input type="password" id="pass" name="pass" placeholder="Wpisz swoje hasło" value="tajnehaslo" /><br>
+    < /form><br>
+  </code>
+  Pole input - oznacza pojedynczą kontrolkę, którą będzie wypełniał użytkownik. Rodzaj inputa określa jego atrybut <code>type</code>, jest wiele rodzajów inputów:<br>
+  <ul>
+    <li><code>text</code> – pole tekstowe,</li>
+    <li><code>email</code> – pole tekstowe do wpisywania e-maili,</li>
+    <li><code>number</code> – pole do wpisywania tylko liczb,</li>
+    <li><code>date</code> – pole do wpisywania lub wyboru daty,</li>
+    <li><code>url</code> – pole tekstowe do wpisywania adresu www,</li>
+    <li><code>password</code> – pole tekstowe do wpisywania haseł (wpisywany w to pole tekst jest zamieniany na kropki),</li>
+    <li><code>range</code> – pole do wyboru wartości z zakresu,</li>
+    <li><code>color</code> – pole do wyboru koloru.</li>
+  </ul>
+  <code>
+    < label for="text">Pole tekstowe< /label><br>
+    < input type="text" id="text" /><br>
+
+    < label for="email">Pole email< /label><br>
+    < input type="email" id="email" /><br>
+
+    < label for="number">Pole number< /label><br>
+    < input type="number" id="number" /><br>
+
+    < label for="date">Pole date< /label><br>
+    < input type="date" id="date" /><br>
+
+    < label for="url">Pole url< /label><br>
+    < input type="url" id="url" /><br>
+
+    < label for="password">Pole password< /label><br>
+    < input type="password" id="password" /><br>
+
+    < label for="range">Pole range< /label><br>
+    < input type="range" id="range" /><br>
+  </code>
+  Textarea - element ten służy do wpisywania wieloliniowej treści: <br>
+  <code>
+    < label for="message">Pole textarea< /label><br>
+    < textarea id="message">< /textarea><br>
+  </code>
+  Pole textarea jest wyjątkowym polem – nie ma atrybutu <code>value</code>. Jego wartość powinna pojawić się między otwierającym i zamykającym znacznikiem <code>value</code>:<br>
+  <code>
+    < label for="message">Pole textarea< /label><br>
+    < textarea id="message">Poprzednia wiadomość wpisana przez użytkownika< /textarea><br>
+  </code>
+  Jeżeli chcemy dla tego pola użyć atrybutu <code>placeholder</code>, znacznik otwierający i zamykający muszą znaleźć się obok siebie. Pomiędzy znacznikami nie może znaleźć się nawet "spacja": <br>
+  <code>
+    <!-- tutaj zadziała --><br>
+        < textarea id="message" placeholder="Wpisz wiadomość">< /textarea><br>
+
+    <!-- tutaj nie zadziała --><br>
+        < textarea id="message" placeholder="Wpisz wiadomość"> < /textarea><br>
+  </code>
+  Pole checkbox - charakterystyczny input, który służy do potwierdzania danego wyboru: <br>
+  <code>
+    < form> <br>
+        < label> < input type="checkbox" name="agreement" value="1" /> Wyrażam zgodę < /label>< br /> <br>
+        < label> < input type="checkbox" name="orderProduct" value="1" checked /> Zamawiam produkt < /label> <br>
+    < /form> <br>
+  </code>
+  Każde pole powinno mieć swoją wartość <code>value</code> która, jeżeli pole jest zaznaczone, zostanie przesłana na serwer. W powyższym przykładzie drugie pole dostało atrybut <code>checked</code>-dane pole ma być domyślnie zaznaczone oraz atrybuty <code>name</code>-obie wartości trafią na serwer pod innymi nazwami.<br>
+  Pola checkbox mogą też występować w grupach o tej samej nazwie. Dzięki temu użytkownik może wybrać kilka opcji. W przypadku kilku pól o tej samej nazwie warto je pogrupować za pomocą znacznika <code>< fieldset></code>, któremu nadajesz tytuł dla całej grupy za pomocą znacznika <code>< legend></code>: <br>
+  <code>
+    < form><br>
+        < fieldset><br>
+            < legend>Wybierz zwierzę< /legend><br>
+            < label> < input type="checkbox" name="pet" value="dog" /> pies < /label>< br /><br>
+            < label> < input type="checkbox" name="pet" value="cat" /> kot < /label>< br /><br>
+            < label> < input type="checkbox" name="pet" value="pig" /> świnka < /label>< br /><br>
+            < label> < input type="checkbox" name="pet" value="hamster" /> chomik < /label>< br /><br>
+            < label> < input type="checkbox" name="pet" value="chicken" /> kura < /label><br>
+        < /fieldset><br>
+    < /form><br>
+  </code>
+  Pole radio - podobne do pola checkbox, różnica jest taka, że w danej grupie pól można jednorazowo wybrać tylko jedną opcję: <br>
+  <code>
+    < form><br>
+        < fieldset><br>
+            < legend>Wybierz płeć< /legend><br>
+            < label> < input type="radio" name="gender" value="m" /> mężczyzna < /label>< br /><br>
+            < label> < input type="radio" name="gender" value="w" /> kobieta < /label><br>
+        < /fieldset><br>
+    < /form><br>
+  </code>
+  Pole select - służy do wybierania opcji z rozwijanego komponentu. Kolejne opcje, z których można wybierać, umieszczamy w znacznikach <code>< option></code>. Każdy option powinien mieć swój atrybut <code>value</code> oraz tekst danej opcji, który będzie wyświetlany po rozwinięciu selecta: <br>
+  <code>
+    < label for="city">Wybierz miasto< /label><br>
+    < select name="city" id="city"><br>
+        < option value="-1">Wybierz< /option><br>
+        < option value="gdansk">Gdańsk< /option><br>
+        < option value="warsaw">Warszawa< /option><br>
+        < option value="wroclaw">Wrocław< /option><br>
+        < option value="zakopane">Zakopane< /option><br>
+    < /select><br>
+  </code>
+  Domyślnie wybrana jakaś opcja, powinna otrzymać dodatkowy atrybut <code>selected</code>: <br>
+  <code>
+    < label for="city">Wybierz miasto< /label><br>
+    < select name="city" id="city"><br>
+        < option value="-1">Wybierz< /option><br>
+        < option value="gdansk">Gdańsk< /option><br>
+        < option value="warsaw" selected>Warszawa< /option><br>
+        < option value="wroclaw">Wrocław< /option><br>
+        < option value="zakopane">Zakopane< /option><br>
+    < /select><br>
+  </code>
+  Button - przyciski w formularzach można tworzyć na dwa sposoby.<br>
+  Jeden to zastosowanie elementu <code>input</code>, który otrzyma atrybut <code>type="button"</code>: <br>
+  <code>
+    < input type="button" value="Kliknij" /><br>
+  </code>
+  Drugim, zalecanym, to użycie znacznika <code>< button></code>:<br>
+  <code>
+    < button type="button">Kliknij< /button><br>
+  </code>
+  Zalecenie to wynika z prostego faktu. Między otwierający i zamykający znacznik buttona można wstawiać html – np. <code>span</code> z ikonką wczytywania czy ikonką dla danego przycisku. W przypadku inputa, którego treść podawana jest w atrybucie <code>value</code> – nie ma takiej możliwości:<br>
+  <code>
+    < button type="button">< strong>Kliknij< /strong> ten przycisk< /button><br>
+  </code>
+  Button submit - przycisk do wysyłania formularzy typu <code>submit</code> (może to być <code>input</code> lub <code>button</code>), po kliknięciu takiego przycisku formularz zostanie wysłany: <br>
+  <code>
+    < form><br>
+        ...<br>
+        < button type="submit">Wyślij< /button><br>
+    < /form><br>
+  </code>
+  </p>
 
 </body>
 </html>
