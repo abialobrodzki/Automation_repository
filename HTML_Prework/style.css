@@ -1,0 +1,26 @@
+#tytul {
+	color: blue;
+	font-size: 25px; 
+	font-family:  Calibri;
+	font-weight: bold;
+
+}
+#spis_tresci {
+	color: blue;
+	font-size: 15px; 
+	font-family: Calibri;
+}
+
+.arrow {
+width: 0;
+height: 0;
+border: 5px solid red;
+border-bottom-color: white;
+margin-left: 5px;
+}
+
+.podtytul {
+	font-size: 20px;
+	font-family: Calibri;
+	font-weight: bold;
+}

@@ -1,542 +1,549 @@
 <!doctype html> <!-- deklaracja dokumentu -->
-<html lang="pl-PL"> <!-- język strony -->
-<!-- pomiędzy znacznikami "html" znajduje się treść strony -->
-<head>
-<!-- pomiędzy znacznikami "head" znajdują się ustawienia strony -->
-    <meta charset="utf-8"> <!-- kodowanie strony -->
-    <meta name="keywords" content="key1, key2"> <!-- opis strony -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- opis skalowania na różnych ekranach -->
-    <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- znacznik x-ua-compatible, dla przeglądarek IE by wymuszać użycie najnowszego silnika renderującego -->
-    <title>Materiały HTML</title> <!-- tytuł strony wyświetlany na pasku zakładek -->
-    <link rel="stylesheet" href="style2.css"> <!-- link do pliku CSS -->
-</head>
-<body>
-<!-- pomiędzy znacznikami "body" znajduje się właściwa treść strony, wyświetlana w przeglądarce -->
-  <h1>Materiały HTML</h1> <!-- 'h1'-'h6' Nagłówki - od największej do najmniejszej czcionki -->
-  
-  <h6 id="spis_tresci">Spis treści: <ol> <!-- 'id' nagłówka dla hiperłącza -->
-    <li> <a href="#znaczniki">Znaczniki</a> </li>
-    <li> <a href="#formatowanie_tekstu">Formatowanie tekstu</a> </li>
-    <li> <a href="#hiperlacza">Hiperłącza</a> </li>
-    <li> <a href="#obrazki">Obrazki</a> </li>
-    <li> <a href="#tabele">Tabele</a> </li>
-    <li> <a href="#e.linioweiblokowe">Elementy liniowe i blokowe</a> </li>
-    <li> <a href="#identyfikatoryiklasy">Identyfikatory i klasy</a> </li>
-    <li> <a href="#atrybuty">Atrybuty</a> </li>
-    <li> <a href="#komentarze">Komentarze</a> </li>
-    <li> <a href="#CSS">CSS kaskadowe arkusze stylów</a> </li>
-    <li> <a href="#boxmodel">Box model</a> </li>
-    <li> <a href="#formularze">Projektowanie formularzy</a> </li>
+    <html lang="pl-PL"> <!-- język strony -->
+    <!-- pomiędzy znacznikami "html" znajduje się treść strony -->
+    <head>
+        <!-- pomiędzy znacznikami "head" znajdują się ustawienia strony -->
+        <meta charset="utf-8"> <!-- kodowanie strony -->
+        <meta name="keywords" content="key1, key2"> <!-- opis strony -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- opis skalowania na różnych ekranach -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- znacznik x-ua-compatible, dla przeglądarek IE by wymuszać użycie najnowszego silnika renderującego -->
+        <title>Materiały HTML - notatnik</title> <!-- tytuł strony wyświetlany na pasku zakładek -->
+        <link rel="stylesheet" href="style.css"> <!-- link do pliku CSS -->
+    </head>
+    <body>
+        <!-- pomiędzy znacznikami "body" znajduje się właściwa treść strony, wyświetlana w przeglądarce -->
+        <h1 id="tytul">Materiały HTML - notatnik</h1> <!-- 'h1'-'h6' Nagłówki - od największej do najmniejszej czcionki -->
 
-  </ol> </h6>
-  
-  <h4 id="znaczniki">Znaczniki HTML, struktura</h4> 
-    <p>Znaczniki zamknięte: 'p' - fragment tekstu; 'h1' - tytuł na stronie; 'a' - odnośnik </p> <!-- 'p' Paragrafy - służą do grupowania tekstu w akapity -->
-    <p>Znaczniki puste: 'hr' ;  'br' ; 'img' ; 'input' ; 'base' ; 'col' </p>
-  
-  <h4 id="formatowanie_tekstu">Formatowanie tekstu</h4>  
-    <p>Znaki specjalne - zaczynają się znakiem ampersand'&', a kończą średnikiem';': nbsp:&nbsp; trade:&trade; lt:&lt; gt:&gt; copy:&copy; reg:&reg; alpha:&alpha; </p>
-    <p>Nowa linia - przejście do nowej linii: 'br' <br> </p> <!-- 'br' - nowa linia -->
-    <p>Indeks górny/dolny - indeks górny: 'sup' <sup>indeks górny</sup> indeks dolny: 'sub' <sub>indeks dolny<sub/> </p> <!-- 'sup' - indeks górny, 'sub' - indeks dolny -->
-    <p>Znacznik formatujący - pogrubienie tekstu 'strong': <strong>pogrubiony tekst ma znaczenie</strong> </p> <!-- 'strong' - oznaczony fragment jest ważny -->
-    <p>Znacznik formatujący - pogrubienie pogrubienie tekstu 'b': <b>pogrubiony tekst tylko wizualnie</b> </p> <!-- 'b' - oznaczony fragment nie jest ważny, tylko kontekst wizulany -->
-    <p>Znacznik formatujący - cytat 'cite': <cite>cytowany tekst</cite> </p> <!-- 'cite' - oznaczenie cytatu -->
-    <p>Znacznik formatujący - fragment kodu 'code': <code>fragment kodu</code> </p> <!-- 'code' - oznaczenie kodu -->
-    <p>Znacznik formatujący - przekreślenie 'del': <del>usunięty</del>/poprawiony tekst </p> <!-- 'del' - tekst usunięty, poprawiony -->
-    <p>Znacznik formatujący - uwypuklenie 'em': to <em>BARDZO</em> ważny tekst </p> <!-- 'em' - nadaje tekstowi nacisk, uwypuklenie znaczenia jakiegoś wyrazu -->
-    <p>Znacznik formatujący - kursywa 'i': ta <i>nazwa techniczna</i> oznacza </p> <!-- 'i' - kursywa stosowania do technicznych słów czy nazw -->
-    <p>Znacznik formatujący - skróty klawiszowe 'kbd': <kbd>ALT</kbd> + <kbd>F10</kbd> </p> <!-- 'kbd' - do opisywania skrótów klawiszowych -->
-    <p>Znacznik formatujący - przypisy 'small': <small>Przed użyciem skonsultuj się...</small> </p> <!-- 'small' - stosowany do przypisów, tekstów licencji, copyright -->
-    <p>Znacznik formatujący - adnotacja 'u': <u>polska</u> to nie Polska </p> <!-- 'u' - oznaczający adnotację, która nie jest związana z kontekstem -->
-    <p>Znacznik formatujący - ?? 'span': <span>co oznacza?</span> </p> <!-- 'span' - ?? -->
-    <p>Lista nieuporządkowana - 'ul': <ul>Lista:<li>aaa</li><li>bbb</li><li>ccc</li></ul> </p> <!-- 'ul' - punktory -->
-    <p>Lista uporządkowana - 'ol': <ol>Lista:<li>aaa</li><li>bbb</li><li>ccc</li></ol> </p> <!-- 'ol' - liczby -->
-    <p>Lista definicji - 'dl': <dl>Lista:<dt>pojęcie a</dt><dd>aaa</dd><dt>pojęcie b i c</dt><dd>bbb</dd><dd>ccc</dd></dl> </p> <!-- 'dl': 'dt' + 'dd' - składa się z par pojęcie – definicja -->
-  
-  <h4 id="hiperlacza">Hiperłącza</h4> 
-    <p>Hiperłącza zewnętrzne - 'href': <a href="https://google.pl">Przejdź do strony Google</a> </p> <!-- użytkownik przechodzi do innego serwisu, zaczynającego się od protokołu 'http' lub 'https' -->
-    <p>Hiperłącza wewnętrzne "podstrona" - 'href': <a href="info.html">Przeniosę na stronę info.html</a> </p> <!-- prowadzące do podstrony w ramach tej samej strony -->
-    <p>Hiperłącza wewnętrzne "kotwice" - 'href' + '#": <a href="#spis_tresci">Przejdź do spisu treści</a> </p> <!-- przenoszące do danej sekcji na tej samej podstronie -->
-    <p>przeniesie na stronę youtube.pl:  <code> .a href="http://youtube.pl". klik ./a. </code>
-    <p>przeniesie na podstronę kontakt.html:  <code> .a href="kontakt.html". klik ./a. </code>
-    <p>przeniesie do elementu o id równym "end":   <code> .a href="#end". klik ./a. </code>
-    <p>przeniesie na początek strony:  <code> .a href="#". klik ./a. </code>
-    <p>przeniesie do artykułu we wskazane miejsce:  <code> .a href="https://pl.wikipedia.org/wiki/HTML#Atrybuty". klik ./a. </code>
-    <p>atrybut 'rel': </p> <!-- stosowany na potrzeby pozycjonowania, określa jak powinien zachować się Googlebot indeksujący daną stronę -->
-    <ul>
-      <li>wartość: 'dofollow' (podążaj) – domyślna <code> .a href="http://www.coderslab.pl" rel="nofollow". nazwa_linka ./a. </code> </li>
-      <li>wartość 'nofollow' (nie podążaj) <code> .a href="http://www.coderslab.pl" rel="dofollow". nazwa_linka ./a. </code> </li>
-    </ul>
-    <p>atrybut 'target': </p> <!-- określa, czy dany link ma być otwarty w danej karcie czy w nowej -->
-    <ul>
-      <li>wartość: '_blank' – otwarcie strony w nowej karcie <code> .a href="http://inna-strona.html" target="_blank". klik ./a. </code> </li>
-      <li>wartość '_self' – otwarcie strony w tej samej karcie <code> .a href="http://inna-strona.html" target="_self". klik ./a. </code> </li>
-      <li>można dodać wartość 'noopener' <code> .a href="http://inna-strona.html" target="_blank" rel="noopener". klik ./a. </code> </li> <!-- strona otwarta w nowej karcie poprzez właściwość opener, nie odwoła się do tej poprzedniej, chroni to nas przed potencjalnym atakiem -->
-    </ul>
-    <p>pływająca ramka 'iframe': <code> .iframe src="https://www.coderslab.pl" width="100%" height="400". ./iframe. </code> <br> <iframe src="https://www.coderslab.pl" width="100%" height="400"></iframe> </p> <!-- (inline frame, ramka pływająca) umożliwia zawieranie dokumentu HTML wewnątrz innego dokumentu HTML -->
+        <h6 id="spis_tresci">Spis treści: <ol> <!-- 'id' nagłówka dla hiperłącza -->
+            <li> <a href="#znaczniki">Znaczniki</a> </li>
+            <li> <a href="#formatowanie_tekstu">Formatowanie tekstu</a> </li>
+            <li> <a href="#hiperlacza">Hiperłącza</a> </li>
+            <li> <a href="#obrazki">Obrazki</a> </li>
+            <li> <a href="#tabele">Tabele</a> </li>
+            <li> <a href="#e.linioweiblokowe">Elementy liniowe i blokowe</a> </li>
+            <li> <a href="#identyfikatoryiklasy">Identyfikatory i klasy</a> </li>
+            <li> <a href="#atrybuty">Atrybuty</a> </li>
+            <li> <a href="#komentarze">Komentarze</a> </li>
+            <li> <a href="#CSS">CSS kaskadowe arkusze stylów</a> </li>
+            <li> <a href="#boxmodel">Box model</a> </li>
+            <li> <a href="#formularze">Projektowanie formularzy</a> </li>
+            <li> <a href="#relacje">Relacje między elementami HTML</a> </li>
+        </ol> </h6>
 
-   <h4 id="obrazki">Obrazki</h4> 
-    <p>wstawianie grafiki 'img': <code> .img src="apple.jpg" width="600" height="400" alt="jabłko" title="Jabłko". </code> </p>
-    Atrybuty: 
-    <ul>
-      <li> atrybut 'src' zawiera ścieżkę do konkretnego pliku z grafiką <code> .img src="apple.jpg" width="600" height="400" alt="jabłko" title="Jabłko". </code> </li> <!--  zawiera ścieżkę do konkretnego pliku z grafiką -->
-        <ul>
-          <li> relatywna ścieżka do grafiki: <code> .img src="images/ladne-kwiatki.png" alt="kwiatki". </code> </li>
-          <li> grafika ściągana z zewnętrznego serwera: <code> .img src="http://inny-serwer.pl/gruszki.jpg" alt="gruszki". </code> </li>
-          <li> kodowanie Base64 <code> .img src="data:image/png;base64,iVBOR...==". </code> zakdowane logo Coders Lab <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAoCAYAAAB5LPGYAAAL2klEQVR4nO2ce9RUVRXAf+CAjqKIiq+0EcxH5gtcKin5TqZ9XEorSjEjzAe6yhK0skwzpWVaClnqygwNVz7wldrZDopmJAIqPtBUfKCjmCI+ERtEhf7YZ+B+Z+4M8803fPjJ/Na66/vO455z5t599jlnn31uNyKcyLrAUOBQYHdgG6B3IstiYD7wMjAHeBr4o1ddEpfVWTiRcUC/RNQlXvXe1dWezqBUyF0GrJuIujKbL96/GtoxGDg+EfVMNl/8Tb33Z8r/OJFuwI+As4CNatyzDpAL11dC3ARgtQkgcCCwWyL899XVkE7kaNoqhvuAThdA4AvAdxPhfwHtE0An0gOYhGm+Fi06jbIGPI/qwvce8F9gIab9ssDG4WrRokNknEg/4LSUtEnABcBjXnVpnOhEskB/TAX/b5W2ssVnlgw2l8hE8Wd51bG1bvSqJeA/4WrRoiG6A4dEcXOA81dDW1qsgWSAHaO4SV71k44WHIb24cB+2FC9MbAW8A4wD5gJ3ORVZ9RR1kHYHHVvYEtgfeBtoAhMo/aqPVlOFvgOcDCwc7gvi81vXwGmA1d51Qqt7kT2BrYIwQVedVoibW3MIrAnsNirjkuk9QWOC3VuD/QNdS4Jv+F54EHgWq86q57f0WxKhdz+wDBgIPB57PkuxZ5L2eQ2G3gImJrNF2tNuTYpFXKnA/tglpI+wLvAa8ADwM3ZfPGZcuYMsFlUwOyO/Jiwor4QOAUTuJjemG1xMHCaEykAI7zqgpSyNgauxWySaeX0Aw6os10DgVuxB5xW1tbYQxvjRMZ61bOjPD8Djgj/v+VENgP2wGxgR2EvDcwMMS7UeTBwC7BBSp09gc3DNRjroCPr+S3NolTIbQlMxDpHGn0wIdoLE1CAj0qF3CbZfHFhlXu+BPw2JX4AIMDYUiF3BXBKNl9c0h3oFmV8sx2/IY2rgVNJF7408sA9TmS9ZKQT6Y69vDThaxdOZHOgQLrwxXQDznIio2rk2RibqswETmCF8CXr7Im93DThW+2UCrn1gHuoLnzV6IFN3TrCicBfaEJBbXAih2CLmpgXMc3wT+AJTL0n2YXKlfjR2PCdZCnweChrGvAU8HEdTfslNvQl+RCYCtwGPJZyz3lBiKqx7UrqLE8XkizGhqF/AHdhQ9q7KylnVTGGyunXJ9izuA97xk8DHzRY/nzgGex9vZaSfkypkNsvXv12lGOi8HvAYV61jYXeieSwl7BzdO+5ifDIqKwXgCFe9YWorLWBR4EvpjUoCFHcKaYDQ73qG4l8+2FaMhui+gKDMCGtRflBzwMWsEKYPxflewvY3qu+ndLGbbGhuDMZHoWfAiSbLxaTkaVCbhtMgdTLLOBr2XyxzZSqVMjth+1Q9UlEf6/ZAjgoCl8cCx+AVy06kTGYFiiznRPp41XfCeG9ott+FQtfKOtDJ1JrG3AXKofBEUnhC+VMdSJXAycnoveiugDeAvwkrU2BeCFXooq2C2VUK6fplAq59anssD+Nha9BFsXCB5DNF6eWCrkLaWth2aepQzCVvXh6jbxp+5ZbAjiRDamcV81ssE27R+HZXvX5KnnjoXiL1FzGEzWED+C5KLwVMMWJDKhxT2cRa2ew6cCqZloU7tdsDRgLTUVPKONVS04kju4R/vaOEzDzTSNsFYU/diIjq+SNte6GDdYJNvd5AtPAZQ4EHnEit2Ea/dEOlN8R1kmJq5garALej8KZZgtgszRqvDIH+KjBsuJOMRC4qs57P2ywTrzqMicyHLgX2DRKPgI4woncjO06Pd1oPc0imy82+nw7RLOH4E8jab29Xt7rSMXBoD0QuLlKlm8ATziRscEdbo0jAyyjrcZJG/66MrGZZi42NNbDIx2t3Ku+CgxzIoOAc4AhUZa1gDOxd3FGR+vramQwM0Jy8bATZhtrhFiYm0m9hu2YeN4x1ase29HGtJew5ZivIYhjnMiFaWaazqBUyGWy+WI9NtWm0h14Mor7ZgeGg3h7ZpNqGeOdj0D5AaSZK/qkxNXD61F4ZQbkVYpXneFV88CIKKkHlYugVUXaNlrVd9VEesQR3bHdiSQDgNENVhCvemO7YJIvp8S9DuBV36XSxzA2p9RL7FiwtxNJM0N0Kl71Gsx4naSzjNHzU+IGdkK9u0bheRngGmxISErnRWHz/vfAI2neMU6kF+bl0g+4MxxKmok5qJYZ7UR8bG4IHiIXREW+5FWT+9CzWHHmBOBsJzLNq7bZ1gmHqGptmT2MeZ6U8/QEJjqRI6P6kmVmgJ5etWFHWyfyJ2wb63ZghlddHKX3o3J7sCOLnnVLhVw9ZqNSNl/8oFTIzQF2SMSPLRVyD2fzxTei/LEZqyFKhdymwI+j6EcyXvUVJ3I+EHt/fDtcJSfyOqa2NwDWS1xl+mAv+YZwT5mNgFlO5GHM7egTzNi8D5Wr0+ui8I20FcBdgJecyEzMZrUu5sGyPTVW8151kRO5jrYHZw4CXnYiDwBvhLZnw+/YCutYJ2GOFY2yGWZuGY3ZHl/ENM9SzJlhByodgTtijrk0XCtjNDAeW5n/PBE/ACiWCrkZWEfoA2xHbWN8GruXCrk7sXf0ETat2gyzgcbTrknlB3Au9tDjvVywF9MvJb4Cr3qHE7kdODwR3Q3zk9uzxq1zqdSIV2JeNf0TcT1pK5T18gvMFSipcbK03xOkUTLYy9yuRp4ZXvWZGunNZhzWyZK+lOtQp3tbDXpjHk4r40Hghu4AYYgdAYyictLeXobTPs0xHdjfq7YZfoLL/xBMOFfGolqJXnUepvU68wUvXnmW5TyLOcp2Gtl88U2sU8ZDbho1n28DPAAcls0XP14+BHjVZcAVTuSvoWFDsLO2/bHdhCz2UD/AfAZfxoaMOSRcdsK86VgncjH2UAdjK88+mCYoe0Q/hA2zd4W6K/CqzzuRnTGnz6GY90xfbMici/WiO7CF1ITErS+nlPWkE9kF+DrmY7gHNtyuD6yNrbznY8Iwm8p9y/ZyNHAJNvTshc2Ny9pmMXbScA4wGbjZq7bXBHI/0KuBdi1f+GTzxZmlQm4HzAFDMPesTTCBew5zxLgeGzpPSZSR3DV5Cps+bYMNtX1J8Y8M9U7Hpmm3ZvPFpbDqbHYt1nBKhVyGFR1k0eqwMbZo0aJFixYtWrRo0aJFBV12FRy28yZiZxvWAmZ51aGJ9Oup3Is+x6tencgz26vumijvVuAHXvWxRJ59sXPOW4eoB4FTg20x2R4FTozjozwHY9ubu6Z9bycl/zBgkFc9PYQHYWaRmJvKeboazfaI7kzOxOxognWk5I4JXvWo8v9OZEfgbsBHZXw+pPcOaRdGwtcfO8k13KtOCWeVRwEFJ7J7ZLvbkpU/z1HY1tQhtD2QVY1eJLxUgkvXNqFtj2En+16qo5xPLV1ZAJcB7wUj9jJsr7kCJ7IWtjMzpsrXF3piJ9yu8Ko3RcnHARO96hSAoLUudyIjgK8Cd6aU18OrVri3Bw27B2bQPZ76BPAzT6ZUyJ2M7QR8GlmYzRcnVEn7A3B32CkZn3b8MzAGeNWr3piS1h2z4i/wqlempO+EfRok5nFsVyYWwJOAA5zIvikeRCNCXZOBS51I37QO0WxKhdwwmuTRsirosmdCvOpcbP7ngcucyN/iPGHoPRX4fpViemFu9/s7kT3aUf0SEvPncKh9a+x5HhwLX3DwPZEVW1rzqXRIXSPJZPPFy1d3Ixol+CBeFYTvWSeyg1edA8u/LfNn7PB4NQeLhV71105kNnC9ExnoVZMu/E9jw2asPXfDNFmZnpjr/2VeNe1TFoMxB9vywW+PfVPmonp/a6Nk88V4WvGpostqQCeSSxwdKH9mLem18UPgLa9aoRljvOod2DmYK6KkCZhjxfLVtBM5DjtmOTlx/xRqf+PlROB3XnV8uM4DFjqRRlzLPlN05UXIGcDhTmQR5uR5RjiBVmYk0NeJvJSIG+9VxyfCSRewM4DJTuQor3o9LPfGORKbs/XGNN3jwKEp3ivvA1OdSNm8MsGrnutE1sc+VHRClP9y4FvAv2v8xiVU//zx+1R+5KnL8X+QDbqlOmWnagAAAABJRU5ErkJggg=="> </li>
-        </ul>
-      <li> atrybuty 'widtht' oraz 'height': <code> .img src="dog.png" width="100%" height="50%". </code> </li> <!-- ustalają początkowy rozmiar grafiki (są jednak opcjonalne), np. 100% szerokości rodzica, 50% wysokości rodzica -->
-      <li> atrybut 'alt': <code> .img src="..." alt="smaczne jabłka". </code> </li> <!-- zawiera alternatywny tekst, który wyświetlany jest, gdy grafika się nie wczyta -->
-      <li> atrybut 'title': <code> .img src="dog.png" alt="kwiatki" title="Biały pies". <br> .a href="http://google.pl" title="Przejdź do strony google.pl">http://google.pl ./a. </code> </li> <!-- zawiera tekst, który pojawi się w dymku, gdy najedziemy na dany element -->
-    </ul>
-    </ul>
-  
-  <h4 id="tabele">Tabele</h4>
-    <p>Znaczniki tabeli - 'table': <code>w nim zagnieżdżona jest cała tabela</code> </p>
-    <p>Znaczniki tabeli - 'tbody': <code>zawiera główne ciało tabeli</code> </p>
-    <p>Znaczniki tabeli - 'tr': <code>table row – rzędy tabeli</code> </p>
-    <p>Znaczniki tabeli - 'td': <code>table data – pojedyncze komórki</code> </p>
-    <p>Znaczniki tabeli - 'th': <code>komórka nagłówków</code> </p>
-    <p>Sekcje tabeli - 'thead': <code>sekcja z nagłówkiem tabeli</code> </p>
-    <p>Sekcje tabeli - 'tbody': <code>główne ciało tabeli</code> </p>
-    <p>Sekcje tabeli - 'tfoot': <code>stopka tabeli</code> </p>
-    <p>Łączenie komórek - 'colspan': <code>określa ile kolumn ma zajmować dana komórka ("szerokość")</code> </p>
-    <p>Łączenie komórek - 'rowspan': <code>określa ile wierszy ma zajmować dana komórka ("wysokość")</code> </p>
-    <p>Przykład tabeli: </p>
-    <table>
-        <thead>
-            <tr> <!-- Zawartość nagłówka tabeli: elementy th -->
-                <th colspan="4">Statystyki</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>  <!-- Zawartość ciała tabeli: elementy td -->
-                <th></th>
-                <th>Liczba użytkowników</th>
-                <th>Powrót</th>
-                <th>Wyjątki</th>
-            </tr>
-            <tr>
-                <th rowspan="3">Miesiąc</th>
-                <td>Styczeń</td>
-                <td>Luty</td>
-                <td>Marzec</td>
-            </tr>
-            <tr>
-                <td>14100</td>
-                <td>100</td>
-                <td>11000</td>
-            </tr>
-            <tr>
-                <td>14100</td>
-                <td>100</td>
-                <td>11000</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr> <!-- Zawartość stopki tabeli: element td -->
-                <th colspan="3">Podsumowanie</th>
-            </tr>
-        </tfoot>
-    </table>
+        <h4 class="podtytul" id="znaczniki">Znaczniki HTML, struktura<a class="arrow" href="#spis_tresci">-></a></h4>
+        <p>Znaczniki zamknięte: 'p' - fragment tekstu; 'h1' - tytuł na stronie; 'a' - odnośnik </p> <!-- 'p' Paragrafy - służą do grupowania tekstu w akapity -->
+        <p>Znaczniki puste: 'hr' ;  'br' ; 'img' ; 'input' ; 'base' ; 'col' </p>
 
-  <h4 id="e.linioweiblokowe">Elementy liniowe i blokowe</h4>
-   <p>Elementy liniowe: <br>
-    <code> 
-        < a> - link <br>
-        < audio> - element audio (jeżeli ma kontrolki) <br>
-        < b> - zwrócenie uwagi na dany tekst (pogrubienie), bez szczególnego znaczenia <br>
-        < br> - przejście do nowej linii <br>
-        < button> - przycisk w formularzu <br>
-        < canvas> - element po którym można rysować za pomocą JavaScript <br>
-        < cite> - cytat w tekście <br>
-        < code> - tekst będący fragmentem kodu <br>
-        < del> - tekst usunięty (np. przy erracie artykułu) <br>
-        < em> - nadaje tekstowi nacisk, zwykle jest on oznaczony kursywą <br>
-        < i> - pochylenie, oznacza tekst lekko odstający od kontekstu otaczającego go opisu <br>
-        < iframe> - pływająca ramka <br>
-        < img> - grafika na stronie <br>
-        < input> - input w formularzu do wpisywania tekstu (tekstowy, liczbowy, z kolorem itp.) <br>
-        < kbd> - tekst pokazujący klawisze <br>
-        < label> - etykieta inputa w formularzu <br>
-        < map> - mapa powierzchni klikalnych na grafice <br>
-        < noscript> - znacznik używany gdy chcemy pokazać użytkownikowi bez JavaScript jakiś komunikat <br>
-        < progress> - pasek postępu stosowany w formularzach <br>
-        < script> - skrypty na stronie <br>
-        < select> - element select w formularzu <br> 
-        < small> - stosowany do przypisów, tekstów licencji, copyright <br>
-        < span> - element bez znaczenia semantycznego, używany przy budowaniu layoutów lub stylowaniu <br>
-        < strong> - wyróżnienie tekstu, coś ważnego w tekście na co zwracamy uwagę <br>
-        < sub> - dolny tekst <br>
-        < sup> - górny tekst <br>
-        < svg> - grafika wektorowa <br>
-        < textarea> - pole do wpisywania dłuższych tekstów w formularzach <br>
-        < time> - czas, data <br>
-        < u> - tekst będący adnotacją <br>
-        < video> - video na stronach <br>
-        < wbr> - wskazuje, gdzie ma się łamać słowo (br wewnątrz słowa) <br>
-    </code> 
-   </p>
-   <p>Elementy blokowe: <br>
-    <code>
-        < address> - dane adresowe <br>
-        < article> - treść artykułu, artykuł <br>
-        < aside> - boczna belka, treść niezwiązana bezpośrednio z główną zawartością strony <br>
-        < blockquote> - dłuższy (blokowy) cytat <br>
-        < dd> - definicja w liście definicji <br>
-        < div> - element bez znaczenia, używany przy budowaniu layoutów <br>
-        < dl> - lista definicji <br>
-        < dt> - opis definicji <br>
-        < fieldset> - otacza zbiór powiązanych ze sobą kontrolek w formularzach (np. grupa radio) <br>
-        < figcaption> - opis zdjęcia (Rys. Przykładowe zdjęcie) <br>
-        < figure> - grupuje zdjęcie (img) z jego opisem (figcaption) <br>
-        < footer> - stopka sekcji albo całej strony <br>
-        < form> - formularz <br>
-        < h1> - < h6> - nagłówki na stronie <br>
-        < header> - nagłówek sekcji lub całej strony <br>
-        < hr> - pozioma linia <br>
-        < li> - element listy <br>
-        < main> - główna treść strony <br>
-        < nav> - główne nawigacje na stronie <br>
-        < ol> - lista uporządkowana <br>
-        < p> - paragraf, kawałek tekstu <br>
-        < pre> - sformatowany tekst, najczęściej listing kodu <br>
-        < section> - sekcja strony, logiczny kawałek strony <br>
-        < table> - tabela <br>
-        < ul> - nieuporządkowana lista <br>
-    </code> 
-   </p>
-   <p>Elementy liniowo blokowe: <br>
-    <code>
-        < img> - osadzenie obrazów na stronie HTML <br>
-        < input> - pola wejściowe do wprowadzenia danych <br>
-        < select> - tworzy listę rozwijaną <br>
-        < button> - klikalny przycisk <br>
-        < textarea> - wielowierszowa kontrolka wprowadzania tekstu (obszar tekstowy) <br>
-    </code> 
-   </p>
-  
-  <h4 id="identyfikatoryiklasy">Identyfikatory i klasy</h4>
-   <p> Atrybut 'id' czyli identyfikator: 
-    <code> nadawany każdemu elementowi na stronie - pozwala odróżnić od siebie poszczególne elementy dokumentu HTML. Jest to unikalny identyfikator elementu, co oznacza, że dany id możemy przypisać tylko jednemu elementowi na stronie. <br>
-    Przykłady: <br>
-    < h3 id="smallHeader">Nagłówek z id < /h3> <br>
-    < a href="http://google.com" id="link"> <br>
-    Link również może mieć swój identyfikator <br>
-    < /a> <br>
-    < p id="text">Paragraf z identyfikatorem< /p> <br>
+        <h4 class="podtytul" id="formatowanie_tekstu">Formatowanie tekstu<a class="arrow" href="#spis_tresci">-></a></h4>  
+        <p>Znaki specjalne - zaczynają się znakiem ampersand'&', a kończą średnikiem';': nbsp:&nbsp; trade:&trade; lt:&lt; gt:&gt; copy:&copy; reg:&reg; alpha:&alpha; </p>
+        <p>Nowa linia - przejście do nowej linii: 'br' <br> </p> <!-- 'br' - nowa linia -->
+        <p>Indeks górny/dolny - indeks górny: 'sup' <sup>indeks górny</sup> indeks dolny: 'sub' <sub>indeks dolny<sub/> </p> <!-- 'sup' - indeks górny, 'sub' - indeks dolny -->
+            <p>Znacznik formatujący - pogrubienie tekstu 'strong': <strong>pogrubiony tekst ma znaczenie</strong> </p> <!-- 'strong' - oznaczony fragment jest ważny -->
+            <p>Znacznik formatujący - pogrubienie pogrubienie tekstu 'b': <b>pogrubiony tekst tylko wizualnie</b> </p> <!-- 'b' - oznaczony fragment nie jest ważny, tylko kontekst wizulany -->
+            <p>Znacznik formatujący - cytat 'cite': <cite>cytowany tekst</cite> </p> <!-- 'cite' - oznaczenie cytatu -->
+            <p>Znacznik formatujący - fragment kodu 'code': <code>fragment kodu</code> </p> <!-- 'code' - oznaczenie kodu -->
+            <p>Znacznik formatujący - przekreślenie 'del': <del>usunięty</del>/poprawiony tekst </p> <!-- 'del' - tekst usunięty, poprawiony -->
+            <p>Znacznik formatujący - uwypuklenie 'em': to <em>BARDZO</em> ważny tekst </p> <!-- 'em' - nadaje tekstowi nacisk, uwypuklenie znaczenia jakiegoś wyrazu -->
+            <p>Znacznik formatujący - kursywa 'i': ta <i>nazwa techniczna</i> oznacza </p> <!-- 'i' - kursywa stosowania do technicznych słów czy nazw -->
+            <p>Znacznik formatujący - skróty klawiszowe 'kbd': <kbd>ALT</kbd> + <kbd>F10</kbd> </p> <!-- 'kbd' - do opisywania skrótów klawiszowych -->
+            <p>Znacznik formatujący - przypisy 'small': <small>Przed użyciem skonsultuj się...</small> </p> <!-- 'small' - stosowany do przypisów, tekstów licencji, copyright -->
+            <p>Znacznik formatujący - adnotacja 'u': <u>polska</u> to nie Polska </p> <!-- 'u' - oznaczający adnotację, która nie jest związana z kontekstem -->
+            <p>Znacznik formatujący - ?? 'span': <span>co oznacza?</span> </p> <!-- 'span' - ?? -->
+            <p>Lista nieuporządkowana - 'ul': <ul>Lista:<li>aaa</li><li>bbb</li><li>ccc</li></ul> </p> <!-- 'ul' - punktory -->
+            <p>Lista uporządkowana - 'ol': <ol>Lista:<li>aaa</li><li>bbb</li><li>ccc</li></ol> </p> <!-- 'ol' - liczby -->
+            <p>Lista definicji - 'dl': <dl>Lista:<dt>pojęcie a</dt><dd>aaa</dd><dt>pojęcie b i c</dt><dd>bbb</dd><dd>ccc</dd></dl> </p> <!-- 'dl': 'dt' + 'dd' - składa się z par pojęcie – definicja -->
+
+            <h4 class="podtytul" id="hiperlacza">Hiperłącza<a class="arrow" href="#spis_tresci">-></a></h4> 
+            <p>Hiperłącza zewnętrzne - 'href': <a href="https://google.pl">Przejdź do strony Google</a> </p> <!-- użytkownik przechodzi do innego serwisu, zaczynającego się od protokołu 'http' lub 'https' -->
+            <p>Hiperłącza wewnętrzne "podstrona" - 'href': <a href="info.html">Przeniosę na stronę info.html</a> </p> <!-- prowadzące do podstrony w ramach tej samej strony -->
+            <p>Hiperłącza wewnętrzne "kotwice" - 'href' + '#": <a href="#spis_tresci">Przejdź do spisu treści</a> </p> <!-- przenoszące do danej sekcji na tej samej podstronie -->
+            <p>przeniesie na stronę youtube.pl:  <code> .a href="http://youtube.pl". klik ./a. </code>
+                <p>przeniesie na podstronę kontakt.html:  <code> .a href="kontakt.html". klik ./a. </code>
+                    <p>przeniesie do elementu o id równym "end":   <code> .a href="#end". klik ./a. </code>
+                        <p>przeniesie na początek strony:  <code> .a href="#". klik ./a. </code>
+                            <p>przeniesie do artykułu we wskazane miejsce:  <code> .a href="https://pl.wikipedia.org/wiki/HTML#Atrybuty". klik ./a. </code>
+                                <p>atrybut 'rel': </p> <!-- stosowany na potrzeby pozycjonowania, określa jak powinien zachować się Googlebot indeksujący daną stronę -->
+                                <ul>
+                                  <li>wartość: 'dofollow' (podążaj) – domyślna <code> .a href="http://www.coderslab.pl" rel="nofollow". nazwa_linka ./a. </code> </li>
+                                  <li>wartość 'nofollow' (nie podążaj) <code> .a href="http://www.coderslab.pl" rel="dofollow". nazwa_linka ./a. </code> </li>
+                              </ul>
+                              <p>atrybut 'target': </p> <!-- określa, czy dany link ma być otwarty w danej karcie czy w nowej -->
+                              <ul>
+                                  <li>wartość: '_blank' – otwarcie strony w nowej karcie <code> .a href="http://inna-strona.html" target="_blank". klik ./a. </code> </li>
+                                  <li>wartość '_self' – otwarcie strony w tej samej karcie <code> .a href="http://inna-strona.html" target="_self". klik ./a. </code> </li>
+                                  <li>można dodać wartość 'noopener' <code> .a href="http://inna-strona.html" target="_blank" rel="noopener". klik ./a. </code> </li> <!-- strona otwarta w nowej karcie poprzez właściwość opener, nie odwoła się do tej poprzedniej, chroni to nas przed potencjalnym atakiem -->
+                              </ul>
+                              <p>pływająca ramka 'iframe': <code> .iframe src="https://www.coderslab.pl" width="100%" height="400". ./iframe. </code> <br> <iframe src="https://www.coderslab.pl" width="100%" height="400"></iframe> </p> <!-- (inline frame, ramka pływająca) umożliwia zawieranie dokumentu HTML wewnątrz innego dokumentu HTML -->
+
+                              <h4 class="podtytul" id="obrazki">Obrazki<a class="arrow" href="#spis_tresci">-></a></h4> 
+                              <p>wstawianie grafiki 'img': <code> .img src="apple.jpg" width="600" height="400" alt="jabłko" title="Jabłko". </code> </p>
+                              Atrybuty: 
+                              <ul>
+                                  <li> atrybut 'src' zawiera ścieżkę do konkretnego pliku z grafiką <code> .img src="apple.jpg" width="600" height="400" alt="jabłko" title="Jabłko". </code> </li> <!--  zawiera ścieżkę do konkretnego pliku z grafiką -->
+                                  <ul>
+                                      <li> relatywna ścieżka do grafiki: <code> .img src="images/ladne-kwiatki.png" alt="kwiatki". </code> </li>
+                                      <li> grafika ściągana z zewnętrznego serwera: <code> .img src="http://inny-serwer.pl/gruszki.jpg" alt="gruszki". </code> </li>
+                                      <li> kodowanie Base64 <code> .img src="data:image/png;base64,iVBOR...==". </code> zakodowane logo Coders Lab <img src="data:image/png;base64,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"> </li>
+                                  </ul>
+                                  <li> atrybuty 'widtht' oraz 'height': <code> .img src="dog.png" width="100%" height="50%". </code> </li> <!-- ustalają początkowy rozmiar grafiki (są jednak opcjonalne), np. 100% szerokości rodzica, 50% wysokości rodzica -->
+                                  <li> atrybut 'alt': <code> .img src="..." alt="smaczne jabłka". </code> </li> <!-- zawiera alternatywny tekst, który wyświetlany jest, gdy grafika się nie wczyta -->
+                                  <li> atrybut 'title': <code> .img src="dog.png" alt="kwiatki" title="Biały pies". <br> .a href="http://google.pl" title="Przejdź do strony google.pl">http://google.pl ./a. </code> </li> <!-- zawiera tekst, który pojawi się w dymku, gdy najedziemy na dany element -->
+                              </ul>
+                          </ul>
+
+                          <h4 class="podtytul" id="tabele">Tabele<a class="arrow" href="#spis_tresci">-></a></h4>
+                          <p>Znaczniki tabeli - 'table': <code>w nim zagnieżdżona jest cała tabela</code> </p>
+                          <p>Znaczniki tabeli - 'tbody': <code>zawiera główne ciało tabeli</code> </p>
+                          <p>Znaczniki tabeli - 'tr': <code>table row – rzędy tabeli</code> </p>
+                          <p>Znaczniki tabeli - 'td': <code>table data – pojedyncze komórki</code> </p>
+                          <p>Znaczniki tabeli - 'th': <code>komórka nagłówków</code> </p>
+                          <p>Sekcje tabeli - 'thead': <code>sekcja z nagłówkiem tabeli</code> </p>
+                          <p>Sekcje tabeli - 'tbody': <code>główne ciało tabeli</code> </p>
+                          <p>Sekcje tabeli - 'tfoot': <code>stopka tabeli</code> </p>
+                          <p>Łączenie komórek - 'colspan': <code>określa ile kolumn ma zajmować dana komórka ("szerokość")</code> </p>
+                          <p>Łączenie komórek - 'rowspan': <code>określa ile wierszy ma zajmować dana komórka ("wysokość")</code> </p>
+                          <p>Przykład tabeli: </p>
+                          <table>
+                            <thead>
+                                <tr> <!-- Zawartość nagłówka tabeli: elementy th -->
+                                    <th colspan="4">Statystyki</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>  <!-- Zawartość ciała tabeli: elementy td -->
+                                    <th></th>
+                                    <th>Liczba użytkowników</th>
+                                    <th>Powrót</th>
+                                    <th>Wyjątki</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="3">Miesiąc</th>
+                                    <td>Styczeń</td>
+                                    <td>Luty</td>
+                                    <td>Marzec</td>
+                                </tr>
+                                <tr>
+                                    <td>14100</td>
+                                    <td>100</td>
+                                    <td>11000</td>
+                                </tr>
+                                <tr>
+                                    <td>14100</td>
+                                    <td>100</td>
+                                    <td>11000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr> <!-- Zawartość stopki tabeli: element td -->
+                                    <th colspan="3">Podsumowanie</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <h4 class="podtytul" id="e.linioweiblokowe">Elementy liniowe i blokowe<a class="arrow" href="#spis_tresci">-></a></h4>
+                        <p>Elementy liniowe: <br>
+                            <code> 
+                                < a> - link <br>
+                                < audio> - element audio (jeżeli ma kontrolki) <br>
+                                < b> - zwrócenie uwagi na dany tekst (pogrubienie), bez szczególnego znaczenia <br>
+                                < br> - przejście do nowej linii <br>
+                                < button> - przycisk w formularzu <br>
+                                < canvas> - element po którym można rysować za pomocą JavaScript <br>
+                                < cite> - cytat w tekście <br>
+                                < code> - tekst będący fragmentem kodu <br>
+                                < del> - tekst usunięty (np. przy erracie artykułu) <br>
+                                < em> - nadaje tekstowi nacisk, zwykle jest on oznaczony kursywą <br>
+                                < i> - pochylenie, oznacza tekst lekko odstający od kontekstu otaczającego go opisu <br>
+                                < iframe> - pływająca ramka <br>
+                                < img> - grafika na stronie <br>
+                                < input> - input w formularzu do wpisywania tekstu (tekstowy, liczbowy, z kolorem itp.) <br>
+                                < kbd> - tekst pokazujący klawisze <br>
+                                < label> - etykieta inputa w formularzu <br>
+                                < map> - mapa powierzchni klikalnych na grafice <br>
+                                < noscript> - znacznik używany gdy chcemy pokazać użytkownikowi bez JavaScript jakiś komunikat <br>
+                                < progress> - pasek postępu stosowany w formularzach <br>
+                                < script> - skrypty na stronie <br>
+                                < select> - element select w formularzu <br> 
+                                < small> - stosowany do przypisów, tekstów licencji, copyright <br>
+                                < span> - element bez znaczenia semantycznego, używany przy budowaniu layoutów lub stylowaniu <br>
+                                < strong> - wyróżnienie tekstu, coś ważnego w tekście na co zwracamy uwagę <br>
+                                < sub> - dolny tekst <br>
+                                < sup> - górny tekst <br>
+                                < svg> - grafika wektorowa <br>
+                                < textarea> - pole do wpisywania dłuższych tekstów w formularzach <br>
+                                < time> - czas, data <br>
+                                < u> - tekst będący adnotacją <br>
+                                < video> - video na stronach <br>
+                                < wbr> - wskazuje, gdzie ma się łamać słowo (br wewnątrz słowa) <br>
+                            </code> 
+                        </p>
+                        <p>Elementy blokowe: <br>
+                            <code>
+                                < address> - dane adresowe <br>
+                                < article> - treść artykułu, artykuł <br>
+                                < aside> - boczna belka, treść niezwiązana bezpośrednio z główną zawartością strony <br>
+                                < blockquote> - dłuższy (blokowy) cytat <br>
+                                < dd> - definicja w liście definicji <br>
+                                < div> - element bez znaczenia, używany przy budowaniu layoutów <br>
+                                < dl> - lista definicji <br>
+                                < dt> - opis definicji <br>
+                                < fieldset> - otacza zbiór powiązanych ze sobą kontrolek w formularzach (np. grupa radio) <br>
+                                < figcaption> - opis zdjęcia (Rys. Przykładowe zdjęcie) <br>
+                                < figure> - grupuje zdjęcie (img) z jego opisem (figcaption) <br>
+                                < footer> - stopka sekcji albo całej strony <br>
+                                < form> - formularz <br>
+                                < h1> - < h6> - nagłówki na stronie <br>
+                                < header> - nagłówek sekcji lub całej strony <br>
+                                < hr> - pozioma linia <br>
+                                < li> - element listy <br>
+                                < main> - główna treść strony <br>
+                                < nav> - główne nawigacje na stronie <br>
+                                < ol> - lista uporządkowana <br>
+                                < p> - paragraf, kawałek tekstu <br>
+                                < pre> - sformatowany tekst, najczęściej listing kodu <br>
+                                < section> - sekcja strony, logiczny kawałek strony <br>
+                                < table> - tabela <br>
+                                < ul> - nieuporządkowana lista <br>
+                            </code> 
+                        </p>
+                        <p>Elementy liniowo blokowe: <br>
+                            <code>
+                                < img> - osadzenie obrazów na stronie HTML <br>
+                                < input> - pola wejściowe do wprowadzenia danych <br>
+                                < select> - tworzy listę rozwijaną <br>
+                                < button> - klikalny przycisk <br>
+                                < textarea> - wielowierszowa kontrolka wprowadzania tekstu (obszar tekstowy) <br>
+                            </code> 
+                        </p>
+
+                        <h4 class="podtytul" id="identyfikatoryiklasy">Identyfikatory i klasy<a class="arrow" href="#spis_tresci">-></a></h4>
+                        <p> Atrybut 'id' czyli identyfikator: 
+                            <code> nadawany każdemu elementowi na stronie - pozwala odróżnić od siebie poszczególne elementy dokumentu HTML. Jest to unikalny identyfikator elementu, co oznacza, że dany id możemy przypisać tylko jednemu elementowi na stronie. <br>
+                                Przykłady: <br>
+                                < h3 id="smallHeader">Nagłówek z id < /h3> <br>
+                                < a href="http://google.com" id="link"> <br>
+                                Link również może mieć swój identyfikator <br>
+                                < /a> <br>
+                                < p id="text">Paragraf z identyfikatorem< /p> <br>
+                            </code>
+                        </p> 
+                        <p> Klasy 'class':
+                            <code> pozwalają odróżnić poszczególne elementy dokumentu HTML. Klasy idealnie przydają się do stylowania elementów. <br>
+                                Przykłady: <br>
+                                < h2 class="my-element"> < /h2> <br>
+                                < div class="my-element"> < /div> <br>
+                                < div class="my-element"> < /div> <br>
+                                < div class="my-element"> < /div> <br>
+                                <!-- element button z 2 klasami -->
+                                < button class="btn btn-primary">Klik < /button> <br>
+                                <!-- element button z 3 klasami -->
+                                < button class="btn btn-secondary btn-big">Klik < /button> <br>
+                            </code>
+                        </p>
+
+                        <h4 class="podtytul" id="atrybuty">Atrybuty<a class="arrow" href="#spis_tresci">-></a></h4>
+                        <code>< input type="text" value="Tekst"></code> atrybuty w podwójnych cudzysłowach:
+                        <input type="text" value="Tekst"> <br> <!-- atrybuty w podwójnych cudzysłowach -->
+                        <code>< input type='text' value='Tekst'></code> dopuszczalne są też atrybuty w pojedynczych cudzysłowach:
+                        <input type='text' value='Tekst'> <br> <!-- dopuszczalne są też atrybuty w pojedynczych cudzysłowach -->
+                        <code>< input type='text' value=Tekst></code> spotykane są atrybuty bez cudzysłowów, ale nie jest to zalecane:
+                        <input type='text' value=Tekst> <br> <!-- spotykane są atrybuty bez cudzysłowów, ale nie jest to zalecane -->
+                        <code>< input type=text value="Tutaj cudzysłowy muszą być"></code> przy wartościach będących wieloma wyrazami cudzysłowy są konieczne:
+                        <input type=text value="Tutaj cudzysłowy muszą być"> <br> <!-- Przy wartościach będących wieloma wyrazami cudzysłowy są konieczne -->
+                        <code>< input type="text" readonly></code> atrybuty bez wartości:
+                        <input type="text" readonly> <br> <!-- atrybuty bez wartości -->
+                        <code>< input type="text" disabled></code> atrybuty bez wartości:
+                        <input type="text" disabled> <br> <!-- atrybuty bez wartości -->
+
+                        <p class="text" data-id="top"> <!-- znacznik p z dwoma atrybutami -->
+                            znacznik img z kilkoma atrybutami: <code>< img src="kot.jpg" width="200" height="300" alt="kot" title="Kotek"></code> <br>
+                            <img src="kot.jpg" width="200" height="300" alt="kot" title="Kotek"> <!-- znacznik img z kilkoma atrybutami -->
+                        </p>
+
+                        <h4 class="podtytul" id="komentarze">Komentarze<a class="arrow" href="#spis_tresci">-></a></h4>
+                        <nav> Komentarze dodawane pomiędzy znakami <code>< !-- tu komentarz - usuń spację pomiędzy '<'' i '!'' --></code><!-- To jest przykładowy komentarz -->
+                            <ul>
+                              <li>Start</li>
+                              <li>Kontakt</li>
+                          </ul>
+                          <div class="text"> <!-- "div" element blokowy do stylizowania sekcji dla większych partii kodu w przeciwieństie do "span" - dla mniejszych fragmentów kodu -->
+                          </div> <!-- koniec .text -->
+                      </nav>
+
+                      <nav>  
+                        <ul>
+                          <li>Start</li>
+                          <!-- <li>Kontakt</li> -->
+                      </ul>
+                      <div class="text">   
+                      </div>
+                  </nav>
+
+                  <h4 class="podtytul" id="CSS">CSS kaskadowe arkusze stylów<a class="arrow" href="#spis_tresci">-></a></h4>
+                  <p> Struktura CSS: <br>
+                    <code>
+                        p {  //selektor wskazujący na elementy na stronie <br>
+                        color: red; //właściwości:wartości właściwości <br>
+                        font-size: 20px; <br>
+                        border: 2px solid blue; <br>
+                    } <br>
+                </code>
+                Najczęściej wykorzystywane selektory to znaczniki, id i klasy. <br>
+            </p>
+            <p> Po złapaniu elementu selektorem nadajemy mu wygląd właściwościami: <br>
+                <code>
+                    /* wszystkie p */ <br>
+                    p { <br>
+                    margin-bottom: 20px; <br>
+                } <br>
+
+                /* element o unikalnym atrybucie id="element" */ <br>
+                #element { <br>
+                color: red; <br>
+                padding: 20px 0; <br>
+            } <br>
+
+            /* wszystkie elementy o klasie class="test" */ <br>
+            .test { <br>
+            color: blue; <br>
+            margin: 20px 0; <br>
+            border: 2px solid #ddd; <br>
+        } <br>
     </code>
-   </p> 
-   <p> Klasy 'class':
-    <code> pozwalają odróżnić poszczególne elementy dokumentu HTML. Klasy idealnie przydają się do stylowania elementów. <br>
-    Przykłady: <br>
-    < h2 class="my-element"> < /h2> <br>
-    < div class="my-element"> < /div> <br>
-    < div class="my-element"> < /div> <br>
-    < div class="my-element"> < /div> <br>
-    <!-- element button z 2 klasami -->
-    < button class="btn btn-primary">Klik < /button> <br>
-    <!-- element button z 3 klasami -->
-    < button class="btn btn-secondary btn-big">Klik < /button> <br>
-    </code>
-   </p>
-
-  <h4 id="atrybuty">Atrybuty</h4>
-    <input type="text" value="Tekst"> <!-- atrybuty w podwójnych cudzysłowach -->
-    <input type='text' value='Tekst'> <!-- dopuszczalne są też atrybuty w pojedynczych cudzysłowach -->
-    <input type='text' value=Tekst> <!-- spotykane są atrybuty bez cudzysłowów, ale nie jest to zalecane -->
-    <input type=text value="Tutaj cudzysłowy muszą być"> <!-- Przy wartościach będących wieloma wyrazami cudzysłowy są konieczne -->
-    <input type="text" readonly> <!-- atrybuty bez wartości -->
-    <input type="text" disabled> <!-- atrybuty bez wartości -->
-
-    <p class="text" data-id="top"> <!-- znacznik p z dwoma atrybutami -->
-        <img src="kot.jpg" width="200" height="300" alt="kot" title="Kotek"> <!-- znacznik img z kilkoma atrybutami -->
-    </p>
-  
-  <h4 id="komentarze">Komentarze</h4>
-    <nav> <!-- To jest przykładowy komentarz -->
-    <ul>
-      <li>Start</li>
-      <li>Kontakt</li>
-    </ul>
-    <div class="text"> <!-- "div" element blokowy do stylizowania sekcji dla większych partii kodu w przeciwieństie do "span" - dla mniejszych fragmentów kodu -->
-    </div> <!-- koniec .text -->
-    </nav>
-
-    <nav>  
-    <ul>
-      <li>Start</li>
-     <!-- <li>Kontakt</li> -->
-    </ul>
-    <div class="text">   
-    </div>
-    </nav>
-
-  <h4 id="CSS">CSS kaskadowe arkusze stylów</h4>
-   <p> Struktura CSS: <br>
-    <code>
-    p {  //selektor wskazujący na elementy na stronie <br>
-    color: red; //właściwości:wartości właściwości <br>
-    font-size: 20px; <br>
-    border: 2px solid blue; <br>
-    } <br>
-    </code>
-    Najczęściej wykorzystywane selektory to znaczniki, id i klasy. <br>
-   </p>
-   <p> Po złapaniu elementu selektorem nadajemy mu wygląd właściwościami: <br>
-    <code>
-    /* wszystkie p */ <br>
-    p { <br>
-    margin-bottom: 20px; <br>
-    } <br>
-
-    /* element o unikalnym atrybucie id="element" */ <br>
-    #element { <br>
-    color: red; <br>
-    padding: 20px 0; <br>
-    } <br>
-
-    /* wszystkie elementy o klasie class="test" */ <br>
-    .test { <br>
-    color: blue; <br>
-    margin: 20px 0; <br>
-    border: 2px solid #ddd; <br>
-    } <br>
-    </code>
-   </p>
-   <p> Stylowanie po id jest możliwe i działa tak jak po innych selektorach, ale nie jest to najlepsza praktyka. <br>
+</p>
+<p> Stylowanie po id jest możliwe i działa tak jak po innych selektorach, ale nie jest to najlepsza praktyka. <br>
     <code>
         HTML: <br>
         < p id="testP"> <br>
-            lorem ipsum sit dolor <br>
+        lorem ipsum sit dolor <br>
         < /p> <br>
 
         < div id="element"> <br>
-            lorem ipsum sit dolor <br>
+        lorem ipsum sit dolor <br>
         < /div> <br>
 
         CSS: <br>
         #testP { <br>
         color: red; <br>
-        } <br>
+    } <br>
 
-        #element { <br>
-        padding: 10px 0; <br>
-        color: blue; <br>
-        } <br>
-    </code>
-    </p>
-    <p> W przeciwieństwie do id, jedną klasę może mieć wiele elementów. W praktyce CSS oznacza to, że dane stylowanie możemy dać wielu elementom jednocześnie. <br>
+    #element { <br>
+    padding: 10px 0; <br>
+    color: blue; <br>
+} <br>
+</code>
+</p>
+<p> W przeciwieństwie do id, jedną klasę może mieć wiele elementów. W praktyce CSS oznacza to, że dane stylowanie możemy dać wielu elementom jednocześnie. <br>
     <code>
         HTML: <br>
         < h2 class="content"> <br>
-            lorem ipsum dolor sit <br>
+        lorem ipsum dolor sit <br>
         < /h2> <br>
         < p class="content"> <br>
-            lorem ipsum dolor sit <br>
+        lorem ipsum dolor sit <br>
         < /p> <br>
         < p class="content"> <br>
-            lorem ipsum dolor sit <br>
+        lorem ipsum dolor sit <br>
         < /p> <br>
 
         CSS: <br>
         .content { <br>
-            font-size: 16px; <br>
-            font-family: sans-serif; <br>
-            color: blue; <br>
-            font-weight: bold; <br>
-            margin: 20px 0; <br>
-            border: 1px solid #ddd; <br>
-            padding: 20px; <br>
-        } <br>
+        font-size: 16px; <br>
+        font-family: sans-serif; <br>
+        color: blue; <br>
+        font-weight: bold; <br>
+        margin: 20px 0; <br>
+        border: 1px solid #ddd; <br>
+        padding: 20px; <br>
+    } <br>
+</code>
+</p>
+<p> <ul> Stylowanie można dołączyć do naszej strony na trzy sposoby:
+    <li> stylowanie inline w atrybucie style elementu (inline) - nie zalecane </li>
+    <code>
+        < div style="color: red; font-size: 20px; font-weight: bold;"> <br>
+        Przykładowy styl <br>
+        < /div> <br>
+        Takie stylowanie może być akceptowalne, gdy chcemy ukryć dany element: <br>
+        < div style="display: none;"> < /div> <br>
     </code>
-    </p>
-    <p> <ul> Stylowanie można dołączyć do naszej strony na trzy sposoby:
-            <li> stylowanie inline w atrybucie style elementu (inline) - nie zalecane </li>
-                <code>
-                    < div style="color: red; font-size: 20px; font-weight: bold;"> <br>
-                        Przykładowy styl <br>
-                    < /div> <br>
-                    Takie stylowanie może być akceptowalne, gdy chcemy ukryć dany element: <br>
-                    < div style="display: none;"> < /div> <br>
-                </code>
-            <li> wewnątrz znacznika < style> (internal) </li>
-                <code>
-                    Znacznik style możemy umieszczać w sekcji head lub body. Zaleca się umieszczać go w sekcji head, dzięki czemu style szybciej zostaną wczytane i zaaplikowane na stronie: <br>
-                        < !doctype html> <br>
-                        < html lang="pl-PL"> <br>
-                        < head> <br>
-                            ... <br>
-                        < style> <br>
-                            body { <br>
-                                margin: 20px; <br>
-                            } <br>
-                            .element { <br>
-                            width: 100px; <br>
-                            height: 100px; <br>
-                            border: 1px solid red; <br>
-                            margin-bottom: 20px; <br>
-                            } <br>
-                        < /style> <br>
-                        < /head> <br>
-                        < body> <br>
-                            < div class="element">< /div> <br>
-                            < div class="element">< /div> <br>
-                            < div class="element">< /div> <br>
-                        < /body> <br>
-                        < /html> <br>
-                </code>
-            <li> dołączenie oddzielnego pliku ze stylami (external) </li>
-                <code>
-                    Plik ze stylami dołączamy do strony używając znacznika link. Powinien on nosić rozszerzenie .css. Element < link> importuje zewnętrzne pliki na stronę – w tym przypadku importuje arkusz CSS. Składa się z następujących atrybutów: <br>
-                    - Atrybut rel (relation, związek) określa, jakiego typu jest importowany plik, dla CSS będzie miał wartość stylesheet ( arkusz stylów): rel="stylesheet". <br>
-                    - Atrybut href (hypertext reference, odniesienie w hipertekście) określa położenie importowanego pliku: href="style.css". <br>
-                    HTML: <br>
-                        < !-- stronaX.html --> <br>
-                        < !doctype html> <br>
-                        < html lang="pl-PL"> <br>
-                        < head> <br>
-                        < title>Podstrona X< /title> <br>
-                        < link rel="stylesheet" href="style.css"> <br>
-                        < /head> <br>
-                        < body> <br>
-                        < div class="element">< /div> <br>
-                        < /body> <br>
-                        < /html> <br>
-                    CSS: <br>
-                        /* plik style.css */ <br>
-                        body { <br>
-                        background: #eee; <br>
-                        margin: 0; <br>
-                        padding: 30px; <br>
-                        } <br>
-                        .element { <br>
-                        border: 2px solid #aaa; <br>
-                        margin-bottom: 20px; <br>
-                        background: #eee;<br>
-                        padding: 20px; <br>
-                        } <br>
-                </code>
-        </ul>
-    </p>
-   <p> Zagnieżdzanie i dziedziczenie - jeżeli znacznik jest zagnieżdżony w innym znaczniku, to przejmuje on niektóre jego style. W praktyce, z właściwości używanych na co dzień dziedziczone są tylko te odpowiedzialne za tekst. <br>
-   <code>
-   CSS: <br>
-   .parent-element { <br>
-    /* związane z tekstem - dziedziczone */ <br>
-    color: red; <br>
-    font-size: 20px; <br>
-    text-transform: uppercase; <br>
-    letter-spacing: 5px; <br>
-    /* nie związane z tekstem - nie dziedziczone */ <br>
+    <li> wewnątrz znacznika < style> (internal) </li>
+    <code>
+        Znacznik style możemy umieszczać w sekcji head lub body. Zaleca się umieszczać go w sekcji head, dzięki czemu style szybciej zostaną wczytane i zaaplikowane na stronie: <br>
+        < !doctype html> <br>
+        < html lang="pl-PL"> <br>
+        < head> <br>
+        ... <br>
+        < style> <br>
+        body { <br>
+        margin: 20px; <br>
+    } <br>
+    .element { <br>
+    width: 100px; <br>
+    height: 100px; <br>
     border: 1px solid red; <br>
-    background: #ddd; <br>
-    margin: 10px; <br>
-    padding: 20px; <br>
+    margin-bottom: 20px; <br>
+} <br>
+< /style> <br>
+< /head> <br>
+< body> <br>
+< div class="element">< /div> <br>
+< div class="element">< /div> <br>
+< div class="element">< /div> <br>
+< /body> <br>
+< /html> <br>
+</code>
+<li> dołączenie oddzielnego pliku ze stylami (external) </li>
+<code>
+    Plik ze stylami dołączamy do strony używając znacznika link. Powinien on nosić rozszerzenie .css. Element < link> importuje zewnętrzne pliki na stronę – w tym przypadku importuje arkusz CSS. Składa się z następujących atrybutów: <br>
+    - Atrybut rel (relation, związek) określa, jakiego typu jest importowany plik, dla CSS będzie miał wartość stylesheet ( arkusz stylów): rel="stylesheet". <br>
+    - Atrybut href (hypertext reference, odniesienie w hipertekście) określa położenie importowanego pliku: href="style.css". <br>
+    HTML: <br>
+    < !-- stronaX.html --> <br>
+    < !doctype html> <br>
+    < html lang="pl-PL"> <br>
+    < head> <br>
+    < title>Podstrona X< /title> <br>
+    < link rel="stylesheet" href="style.css"> <br>
+    < /head> <br>
+    < body> <br>
+    < div class="element">< /div> <br>
+    < /body> <br>
+    < /html> <br>
+    CSS: <br>
+    /* plik style.css */ <br>
+    body { <br>
+    background: #eee; <br>
+    margin: 0; <br>
+    padding: 30px; <br>
+} <br>
+.element { <br>
+border: 2px solid #aaa; <br>
+margin-bottom: 20px; <br>
+background: #eee;<br>
+padding: 20px; <br>
+} <br>
+</code>
+</ul>
+</p>
+<p> Zagnieżdzanie i dziedziczenie - jeżeli znacznik jest zagnieżdżony w innym znaczniku, to przejmuje on niektóre jego style. W praktyce, z właściwości używanych na co dzień dziedziczone są tylko te odpowiedzialne za tekst. <br>
+   <code>
+       CSS: <br>
+       .parent-element { <br>
+       /* związane z tekstem - dziedziczone */ <br>
+       color: red; <br>
+       font-size: 20px; <br>
+       text-transform: uppercase; <br>
+       letter-spacing: 5px; <br>
+       /* nie związane z tekstem - nie dziedziczone */ <br>
+       border: 1px solid red; <br>
+       background: #ddd; <br>
+       margin: 10px; <br>
+       padding: 20px; <br>
    } <br>
    HTML: <br>
    < div class="parent-element"> <br>
-    < div> <br>
-     < div> <br>
-       < strong>Kocham < span>dziedziczenie < /span>< /strong> <br>
-     < /div> <br>
-    < /div> <br>
+   < div> <br>
+   < div> <br>
+   < strong>Kocham < span>dziedziczenie < /span>< /strong> <br>
    < /div> <br>
-   </code>
-   </p>
-   <p> Kaskadowość - aplikowanie wspólnego stylowania, które pochodzi z różnych miejsc. Podczas aplikowania stylów przeglądarka sprawdza, czy dany selektor CSS pasuje do danego elementu i czy ma odpowiednią moc. Jeżeli tak się dzieje, style do danego elementu są aplikowane. <br>
+   < /div> <br>
+   < /div> <br>
+</code>
+</p>
+<p> Kaskadowość - aplikowanie wspólnego stylowania, które pochodzi z różnych miejsc. Podczas aplikowania stylów przeglądarka sprawdza, czy dany selektor CSS pasuje do danego elementu i czy ma odpowiednią moc. Jeżeli tak się dzieje, style do danego elementu są aplikowane. <br>
    <code>
-   /* plik style1.css */ <br>
-    p { <br>
-    color: #222; <br>
-    } <br>
+       /* plik style1.css */ <br>
+       p { <br>
+       color: #222; <br>
+   } <br>
    /* plik style2.css */ <br>
-    p { <br>
-    padding: 20px; <br>
-    background: red; <br>
-    } <br>
-    < !-- plik html --> <br>
-    < style> <br>
-        p { <br>
-        margin: 20px 0; <br>
-        } <br>
-    < /style> <br>
-    < p> <br>
-    Przykładowy tekst, który dostanie wszystkie powyższe style <br>
-    < /p> <br>
-   </code>
-   </p>
-   <p> Podczas aplikowania styli, kolejne deklaracje mogą wcześniejsze deklaracje nadpisywać, mogą też coś dodawać własnego: <br>
+   p { <br>
+   padding: 20px; <br>
+   background: red; <br>
+} <br>
+< !-- plik html --> <br>
+< style> <br>
+p { <br>
+margin: 20px 0; <br>
+} <br>
+< /style> <br>
+< p> <br>
+Przykładowy tekst, który dostanie wszystkie powyższe style <br>
+< /p> <br>
+</code>
+</p>
+<p> Podczas aplikowania styli, kolejne deklaracje mogą wcześniejsze deklaracje nadpisywać, mogą też coś dodawać własnego: <br>
     <code>
         CSS: <br>
         p { <br>
         color: #222; <br>
-        } <br>
-        p { <br>
-        color: white; /* nadpisaliśmy powyższą deklarację */ <br>
-        padding: 20px; /* dodaliśmy coś nowego */ <br>
-        background: blue; <br>
-        } <br>
-        HTML: <br>
-        < p>Przykładowy tekst < /p> <br>
-    </code>
-   </p>
+    } <br>
+    p { <br>
+    color: white; /* nadpisaliśmy powyższą deklarację */ <br>
+    padding: 20px; /* dodaliśmy coś nowego */ <br>
+    background: blue; <br>
+} <br>
+HTML: <br>
+< p>Przykładowy tekst < /p> <br>
+</code>
+</p>
 
-  <h4 id="boxmodel">Box model</h4>
-  <p> Każdy element na stronie można traktować jak swego rodzaju pudełko – stąd określenie box model. Są pudełka, które dostosowują się do swojej zawartości i układają się obok siebie (inline), są też pudełka, które domyślnie zajmują całą szerokość i układają się jeden pod drugim. Układanie się elementów określa się jako flow dokumentu. <br>
+<h4 class="podtytul" id="boxmodel">Box model<a class="arrow" href="#spis_tresci">-></a></h4>
+<p> Każdy element na stronie można traktować jak swego rodzaju pudełko – stąd określenie box model. Są pudełka, które dostosowują się do swojej zawartości i układają się obok siebie (inline), są też pudełka, które domyślnie zajmują całą szerokość i układają się jeden pod drugim. Układanie się elementów określa się jako flow dokumentu. <br>
   <ul> Właściwość display może przyjąć wiele wariantów:
     <li> <code>block</code> element jest jeden w danej linii, można mu nadawać wymiary i marginesy, </li>
     <li> <code>inline</code> elementy wyświetlają się w linii, nie można nadać im wymiarów i pionowych marginesów, </li>
     <li> <code>inline-block</code> coś pomiędzy inline a block, układa się obok siebie w linii, a jedncześnie można mu nadać wymiary i marginesy, </li>
     <li> <code>none</code> wyłącza wyświetlanie elementu wraz z elementami w jego wnętrzu. </li>
-  </ul>
-  Poza trzema głównymi typami mamy też bardziej "specjalne": <code>list-item</code>, <code>compact</code>, <code>run-in</code>, <code>table</code>, <code>table-caption</code>, <code>table-cell</code>, <code>table-row</code>, <code>table-row-group</code>, <code>table-column</code>, <code>table-column-group</code>, <code>inline-table</code>, <code>flex</code>, <code>inline-flex</code>, <code>grid</code>, <code>inline-grid</code>. <br>
-  Przykład użycia 'display': <br>
-  <code>
+</ul>
+Poza trzema głównymi typami mamy też bardziej "specjalne": <code>list-item</code>, <code>compact</code>, <code>run-in</code>, <code>table</code>, <code>table-caption</code>, <code>table-cell</code>, <code>table-row</code>, <code>table-row-group</code>, <code>table-column</code>, <code>table-column-group</code>, <code>inline-table</code>, <code>flex</code>, <code>inline-flex</code>, <code>grid</code>, <code>inline-grid</code>. <br>
+Przykład użycia 'display': <br>
+<code>
     p { <br>
     display: block; /* na całą szerokość, jeden w linii */ <br>
-    } <br>
-    div { <br>
-    display: inline; /* tylko tyle ile potrzebuje kontent, wiele w jednej linii */ <br>
-    } <br>
-    h1 { <br>
-    display: none; /* element nie będzie wyświetlany */ <br>
-    } <br>
-  </code>
-  Każdy element na stronie można uznać za swoiste pudełko, któremu możesz nadać pewne właściwości. Kilka z nich określa jego rozmiary: <br>
-  <ul>
+} <br>
+div { <br>
+display: inline; /* tylko tyle ile potrzebuje kontent, wiele w jednej linii */ <br>
+} <br>
+h1 { <br>
+display: none; /* element nie będzie wyświetlany */ <br>
+} <br>
+</code>
+Każdy element na stronie można uznać za swoiste pudełko, któremu możesz nadać pewne właściwości. Kilka z nich określa jego rozmiary: <br>
+<ul>
     <li><code>margin</code> odległość od otaczających go elementów (dla inline działają tylko poziome)</li>
     <li><code>border</code> obramowanie danego elementu</li>
     <li><code>width</code> i <code>height</code> określają jego wymiary (pamiętaj: nie działają dla elementów typu inline) </li>
     <li><code>padding</code> czyli odstęp wewnętrzny od krawędzi danego elementu </li>
-  </ul>
-  <img src="box-model.png" width="200" height="160" alt="Box model" title="Box model"> <br>
-  Width i height - domyślnie każdy element na stronie ma szerokość i wysokość ustawioną na auto. Dla elementów blokowych oznacza to „całą możliwą szerokość” (nie jest to równoznaczne z width 100%). <br>
-  <code>
+</ul>
+<img src="box-model.png" width="200" height="160" alt="Box model" title="Box model"> <br>
+Width i height - domyślnie każdy element na stronie ma szerokość i wysokość ustawioną na auto. Dla elementów blokowych oznacza to „całą możliwą szerokość” (nie jest to równoznaczne z width 100%). <br>
+<code>
     CSS: <br>
     .parent { <br>
     border: 1px solid #ddd; <br>
-    } <br>
-    .child1 { /* nie ustawiamy width więc ma ona auto */ <br>
-    height: 20px; <br>
-    background: red; <br>
-    margin: 10px; <br>
-    color: #fff; <br>
-    font-family: sans-serif; <br>
-    } <br>
-    .child2 { <br>
-    height: 20px; <br>
-    background: blue; <br>
-    width: 100%; /* ustawiam width na 100% */ <br>
-    margin: 10px; <br>
-    color: #fff; <br>
-    font-family: sans-serif; <br>
-    } <br>
-  </code>
-  <img src="width-height.png" width="800" height="150" alt="Width and Height" title="Width and Height"> <br>
-  Margin - odpowiada za odstęp danego elementu od innych, otaczających go elementów. <br>
-  Przykłady deklaracji: <br>
-  <code>
+} <br>
+.child1 { /* nie ustawiamy width więc ma ona auto */ <br>
+height: 20px; <br>
+background: red; <br>
+margin: 10px; <br>
+color: #fff; <br>
+font-family: sans-serif; <br>
+} <br>
+.child2 { <br>
+height: 20px; <br>
+background: blue; <br>
+width: 100%; /* ustawiam width na 100% */ <br>
+margin: 10px; <br>
+color: #fff; <br>
+font-family: sans-serif; <br>
+} <br>
+</code>
+<img src="width-height.png" width="800" height="150" alt="Width and Height" title="Width and Height"> <br>
+Margin - odpowiada za odstęp danego elementu od innych, otaczających go elementów. <br>
+Przykłady deklaracji: <br>
+<code>
     CSS: <br>
     /* 'użycie właściwości specyficznych' dla każdej strony elementu oddzielnie*/ <br>
     .element1 { <br>
@@ -544,25 +551,25 @@
     margin-right: 20px; <br>
     margin-bottom: 30px; <br>
     margin-left: 40px; <br>
-    } <br>
-    /* 'shorthand' - z każdej strony inny odstęp - góra, prawo, dół, lewo - jak wskazówki zegara */ <br>
-    .element4 { <br>
-    margin: 10px 20px 30px 40px; <br>
-    padding: 10px 20px 30px 40px; /* góra 10px, prawo 20px, dół 30px, lewo 40px */ <br>
-    } <br>
-    /* połączenie technik - element ma 10px z każdej strony, ale z dołu 50px */ <br>
-    .element { <br>
-    margin: 10px; <br>
-    margin-bottom: 50px; <br>
-    } <br>
-    /* centrowanie w poziomie 'margin: 0 auto' */ <br>
-    .element { <br>
-    width: 500px; <br>
-    margin: 0 auto; <br>
-    } <br>
-  </code>
-  Shorthand - poza skróceniem zapisu, również nadpisuje (a w zasadzie cofa do stanu domyślnego) wcześniej użyte specyficzne właściwości danego typu. <br>
-  <code>
+} <br>
+/* 'shorthand' - z każdej strony inny odstęp - góra, prawo, dół, lewo - jak wskazówki zegara */ <br>
+.element4 { <br>
+margin: 10px 20px 30px 40px; <br>
+padding: 10px 20px 30px 40px; /* góra 10px, prawo 20px, dół 30px, lewo 40px */ <br>
+} <br>
+/* połączenie technik - element ma 10px z każdej strony, ale z dołu 50px */ <br>
+.element { <br>
+margin: 10px; <br>
+margin-bottom: 50px; <br>
+} <br>
+/* centrowanie w poziomie 'margin: 0 auto' */ <br>
+.element { <br>
+width: 500px; <br>
+margin: 0 auto; <br>
+} <br>
+</code>
+Shorthand - poza skróceniem zapisu, również nadpisuje (a w zasadzie cofa do stanu domyślnego) wcześniej użyte specyficzne właściwości danego typu. <br>
+<code>
     CSS: <br>
     .element { <br>
     margin-bottom: 20px; <br>
@@ -579,10 +586,10 @@
     font-weight: bold; <br>
     line-height: 2em; <br>
     font: 30px Arial, sans-serif; /* shorthand nadpisał powyższe właściwości dotyczące fonta */ <br>
-    } <br>
-  </code>
-  Shorthand nie działa w drugą stronę, jeżeli nawet nie znamy konkretnej składni zapisu, możemy użyć skróconego zapisu, a następnie dodać konkretne rzeczy, których nam brakuje: <br>
-  <code>
+} <br>
+</code>
+Shorthand nie działa w drugą stronę, jeżeli nawet nie znamy konkretnej składni zapisu, możemy użyć skróconego zapisu, a następnie dodać konkretne rzeczy, których nam brakuje: <br>
+<code>
     CSS: <br>
     .element { <br>
     margin: 10px; <br>
@@ -590,256 +597,256 @@
 
     font: 20px Arial, sans-serif; <br>
     font-weight: bold; <br>
-    } <br>
-  </code>
-  Z marginesami wiążą się 2 dziwne zachowania.<br>
-  Pierwsze z nich to to, że pionowe marginesy dwóch elementów nie sumują się, a brany jest pod uwagę ten większy (tylko marginesy pionowe). <br>
-  <img src="margin.png" width="200" height="200" alt="Margin" title="Margin"> <br>
-  <img src="margin-horizontal.png" width="350" height="100" alt="Margin horizontal" title="Margin horizontal"> <br>
-  Drugie tyczy się elementów zagnieżdżonych w innych elementach. Domyślnie, jeżeli dziecko elementu ma margines, nie odsuwa on tego dziecka od krawędzi rodzica, a odsuwa samego rodzica. <br>
-  <img src="margin-parent.png" width="300" height="200" alt="Margin parent" title="Margin parent"> <br>
-  Są na to rozwiązania. Wystarczy rodzicowi dać właściwość <code>overflow: hidden</code> lub dziecku dać <code>padding</code> zamiast marginesu. <br>
-  Padding - określa wewnętrzny odstęp danego elementu od własnej krawędzi. <br>
-  <code>
+} <br>
+</code>
+Z marginesami wiążą się 2 dziwne zachowania.<br>
+Pierwsze z nich to to, że pionowe marginesy dwóch elementów nie sumują się, a brany jest pod uwagę ten większy (tylko marginesy pionowe). <br>
+<img src="margin.png" width="200" height="200" alt="Margin" title="Margin"> <br>
+<img src="margin-horizontal.png" width="350" height="100" alt="Margin horizontal" title="Margin horizontal"> <br>
+Drugie tyczy się elementów zagnieżdżonych w innych elementach. Domyślnie, jeżeli dziecko elementu ma margines, nie odsuwa on tego dziecka od krawędzi rodzica, a odsuwa samego rodzica. <br>
+<img src="margin-parent.png" width="300" height="200" alt="Margin parent" title="Margin parent"> <br>
+Są na to rozwiązania. Wystarczy rodzicowi dać właściwość <code>overflow: hidden</code> lub dziecku dać <code>padding</code> zamiast marginesu. <br>
+Padding - określa wewnętrzny odstęp danego elementu od własnej krawędzi. <br>
+<code>
     CSS: <br>
     .element1 { <br>
     border: 1px solid #333; <br>
     background: gold; <br>
     color: red; <br>
-    } <br>
-    .element2 { <br>
-    border: 1px solid #333; <br>
-    background: gold; <br>
-    color: red; <br>
-    padding: 20px; <br>
-    } <br>
-    HTML: <br>
-    < div class="element1"> <br>
-    Przykładowy tekst <br>
-    < /div> <br>
-    < div class="element2"> <br>
-    Przykładowy tekst <br>
-    < /div> <br>
-  </code>
-  <img src="padding.png" width="500" height="150" alt="Padding" title="Padding"> <br>
-  Border - opisuje, jak ma się zachować obramowanie elementu. <br>
-  Składa się on z 3 właściwości, które musimy ustawić dla elementu, aby nadać mu border:
-  <ul>
+} <br>
+.element2 { <br>
+border: 1px solid #333; <br>
+background: gold; <br>
+color: red; <br>
+padding: 20px; <br>
+} <br>
+HTML: <br>
+< div class="element1"> <br>
+Przykładowy tekst <br>
+< /div> <br>
+< div class="element2"> <br>
+Przykładowy tekst <br>
+< /div> <br>
+</code>
+<img src="padding.png" width="500" height="150" alt="Padding" title="Padding"> <br>
+Border - opisuje, jak ma się zachować obramowanie elementu. <br>
+Składa się on z 3 właściwości, które musimy ustawić dla elementu, aby nadać mu border:
+<ul>
     <li><code>border-width</code> właściwość ta określa grubość bordera, można ją nadawać dla całego elementu za pomocą właściwości <code>border-width</code> lub dla każdego boku z osobna: <br>
         <code>
-        CSS: <br>
-        .element1 { <br>
+            CSS: <br>
+            .element1 { <br>
             border-width: 10px; <br>
         } <br>
         /* ta sama zasada co przy marginesach - kierunek wskazówek zegara */ <br>
         .element2 { <br>
-            border-width: 10px 20px 30px 40px; <br>
-        } <br>
-        .element3 { <br>
-            border-top-width: 10px; <br>
-            border-right-width: 20px; <br>
-            border-bottom-width: 30px; <br>
-            border-left-width: 40px; <br>
-        } <br>
-        </code>
-    </li>
-    <li><code>border-style</code> ustawia kolor bordera, tak jak przy szerokości, kolor można ustawić zbiorczo dla wszystkich boków albo dla każdego boku indywidualnie: <br>
-        <code>
-        CSS: <br>
-        div { <br>
-            border-width: 10px; <br>
-            border-style: solid; <br>
-            width: 100px; <br>
-            height: 100px; <br>
-            margin: 10px; <br>
-        } <br>
-        .element1 { <br> 
-            border-color: red; <br>
-        } <br>
-        .element2 { <br>
-            border-color: red blue green yellow; <br>
-        } <br>
-        .element3 { <br>
-            border-top-color: red; <br>
-            border-right-color: blue; <br>
-            border-bottom-color: green; <br>
-            border-left-color: yellow; <br>
-        } <br>
-        </code>
-    </li>
-    <li><code>border-color</code> ostatnia właściwość wymagana do działania bordera to <code>border-style</code>, który określa styl obramowania: <br>
-        <code>
-        CSS: <br>
-        div { <br>
-            border-width: 2px; <br>
-            border-color: red; <br>
-            width: 100px; <br>
-            height: 100px; <br>
-            margin: 10px; <br>
-        } <br>
-        .element-1 { <br>
-            border-style: solid; <br>  
-        } <br>
-        .element-2 { <br>  
-            border-style: solid dotted dashed double; <br>
-        } <br>
-        .element-3 { <br>
-            border-top-style: solid; <br>
-            border-right-style: dotted; <br>
-            border-bottom-style: dashed; <br>
-            border-left-style: double; <br> 
-        } <br>
-        </code>
-    </li>
-  </ul>
-  W większości przypadków takie długie deklaracje jak powyżej nie są używane, ponieważ są niepraktyczne. Zamiast nich stosowany jest skrócony zapis: <br>
-  <code>
-    CSS: <br>
-    .element1 { <br>
-        border: 2px solid red; <br>
-    } <br>
-    .element2 { <br>
-        border: 2px dashed blue; <br>
+        border-width: 10px 20px 30px 40px; <br>
     } <br>
     .element3 { <br>
-        border: 2px dotted green; <br>
+    border-top-width: 10px; <br>
+    border-right-width: 20px; <br>
+    border-bottom-width: 30px; <br>
+    border-left-width: 40px; <br>
+} <br>
+</code>
+</li>
+<li><code>border-style</code> ustawia kolor bordera, tak jak przy szerokości, kolor można ustawić zbiorczo dla wszystkich boków albo dla każdego boku indywidualnie: <br>
+    <code>
+        CSS: <br>
+        div { <br>
+        border-width: 10px; <br>
+        border-style: solid; <br>
+        width: 100px; <br>
+        height: 100px; <br>
+        margin: 10px; <br>
     } <br>
-  </code>
-  Powyższe przykłady pokazują specyficzną cechę rysowania borderów. Gdy obramowanie otrzyma różne kolory, krawędzie stykają się pod kątem – jak ramy obrazu. Można to wykorzystać w wielu sytuacjach jak np. rysowanie kształtów czy robienie grotów strzałek: <br>
-  <code>
+    .element1 { <br> 
+    border-color: red; <br>
+} <br>
+.element2 { <br>
+border-color: red blue green yellow; <br>
+} <br>
+.element3 { <br>
+border-top-color: red; <br>
+border-right-color: blue; <br>
+border-bottom-color: green; <br>
+border-left-color: yellow; <br>
+} <br>
+</code>
+</li>
+<li><code>border-color</code> ostatnia właściwość wymagana do działania bordera to <code>border-style</code>, który określa styl obramowania: <br>
+    <code>
+        CSS: <br>
+        div { <br>
+        border-width: 2px; <br>
+        border-color: red; <br>
+        width: 100px; <br>
+        height: 100px; <br>
+        margin: 10px; <br>
+    } <br>
+    .element-1 { <br>
+    border-style: solid; <br>  
+} <br>
+.element-2 { <br>  
+border-style: solid dotted dashed double; <br>
+} <br>
+.element-3 { <br>
+border-top-style: solid; <br>
+border-right-style: dotted; <br>
+border-bottom-style: dashed; <br>
+border-left-style: double; <br> 
+} <br>
+</code>
+</li>
+</ul>
+W większości przypadków takie długie deklaracje jak powyżej nie są używane, ponieważ są niepraktyczne. Zamiast nich stosowany jest skrócony zapis: <br>
+<code>
+    CSS: <br>
+    .element1 { <br>
+    border: 2px solid red; <br>
+} <br>
+.element2 { <br>
+border: 2px dashed blue; <br>
+} <br>
+.element3 { <br>
+border: 2px dotted green; <br>
+} <br>
+</code>
+Powyższe przykłady pokazują specyficzną cechę rysowania borderów. Gdy obramowanie otrzyma różne kolory, krawędzie stykają się pod kątem – jak ramy obrazu. Można to wykorzystać w wielu sytuacjach jak np. rysowanie kształtów czy robienie grotów strzałek: <br>
+<code>
     CSS: <br>
     .arrow1 { <br>
-        width: 10px; <br>
-        height: 10px; <br>
-        border-top: 5px solid red; <br>
-        border-right: 5px solid red; <br>
-        transform: rotate(-45deg); <br>
-    } <br>
-    .arrow2 { <br>
-        width: 0; <br>
-        height: 0; <br>
-        border: 10px solid yellow; /*transparent*/ <br>
-        border-bottom-color: red; <br>
-    } <br>
-    .arrow3 { <br>
-        width: 0; <br>
-        height: 0; <br>
-        border: 10px solid yellow; /*transparent*/ <br>
-        border-bottom-color: red; <br>
-        border-right-color: red; <br>
-    } <br>
-  </code>
-  Końcową wielkość boksa można obliczyć według wzoru: <br>
-  <code> realWidth = width + padding-left + padding-right + border-left-width + border-right-width </code> <br>
-  <code> realHeight = height + padding-top + padding-bottom + border-top-width + border-bottom-width </code> <br>
-  Do takich rozmiarów trzeba jeszcze dodać marginesy, które odsuwają dany element od otaczających go elementów. <br>
-  <img src="box-model-div.png" width="200" height="150" alt="Box model" title="Box model"> <br>
-  'Box-sizing' pozwala przestawić wyliczanie wielkości elementów w dwa tryby: <br>
-  <ul>
+    width: 10px; <br>
+    height: 10px; <br>
+    border-top: 5px solid red; <br>
+    border-right: 5px solid red; <br>
+    transform: rotate(-45deg); <br>
+} <br>
+.arrow2 { <br>
+width: 0; <br>
+height: 0; <br>
+border: 10px solid yellow; /*transparent*/ <br>
+border-bottom-color: red; <br>
+} <br>
+.arrow3 { <br>
+width: 0; <br>
+height: 0; <br>
+border: 10px solid yellow; /*transparent*/ <br>
+border-bottom-color: red; <br>
+border-right-color: red; <br>
+} <br>
+</code>
+Końcową wielkość boksa można obliczyć według wzoru: <br>
+<code> realWidth = width + padding-left + padding-right + border-left-width + border-right-width </code> <br>
+<code> realHeight = height + padding-top + padding-bottom + border-top-width + border-bottom-width </code> <br>
+Do takich rozmiarów trzeba jeszcze dodać marginesy, które odsuwają dany element od otaczających go elementów. <br>
+<img src="box-model-div.png" width="200" height="150" alt="Box model" title="Box model"> <br>
+'Box-sizing' pozwala przestawić wyliczanie wielkości elementów w dwa tryby: <br>
+<ul>
     <li><code>box-sizing: border-box</code> - border i padding liczone są do środka elementu, rozmiar elementu się nie zmienia</li>
     <li><code>box-sizing: content-box</code> - border i padding liczone są na zewnątrz elementu, rozmiar elementu sie zmienia</li>
-  </ul>
-  Przykład: <br>
-  <code>
+</ul>
+Przykład: <br>
+<code>
     CSS: <br>
     div { <br>
-        width: 200px; <br>
-        height: 200px; <br>
-        background: red; <br>
-        color: #fff; <br>
-        margin: 20px; <br>
-    } <br>
-    .elementb1 { <br>
-        box-sizing: border-box; <br>
-    } <br>
-    .elementb2 { <br> 
-        padding: 20px; <br>
-        box-sizing: border-box; <br>
-    } <br>
-    .elementb3 { <br>
-        padding: 20px; <br>
-        border: 20px solid black; <br>
-        box-sizing: border-box; <br>
-    } <br>
-  </code>
-  Takie wyliczanie rozmiarów elementów na stronach jest tak naturalne, że większość autorów w dzisiejszych czasach rozpoczyna swoje stylowanie od linijek: <br>
-  <code>
+    width: 200px; <br>
+    height: 200px; <br>
+    background: red; <br>
+    color: #fff; <br>
+    margin: 20px; <br>
+} <br>
+.elementb1 { <br>
+box-sizing: border-box; <br>
+} <br>
+.elementb2 { <br> 
+padding: 20px; <br>
+box-sizing: border-box; <br>
+} <br>
+.elementb3 { <br>
+padding: 20px; <br>
+border: 20px solid black; <br>
+box-sizing: border-box; <br>
+} <br>
+</code>
+Takie wyliczanie rozmiarów elementów na stronach jest tak naturalne, że większość autorów w dzisiejszych czasach rozpoczyna swoje stylowanie od linijek: <br>
+<code>
     * { <br>
-        box-sizing: border-box; <br>
-    } <br>
-  </code>
-  'Overflow' pozwala kontrolować zachowanie elementu wobec niemieszczącej się zawartości. Możliwe wartości to: <br>
-  <ul>
+    box-sizing: border-box; <br>
+} <br>
+</code>
+'Overflow' pozwala kontrolować zachowanie elementu wobec niemieszczącej się zawartości. Możliwe wartości to: <br>
+<ul>
     <li><code>hidden</code> – zawartość niewidoczna poza elementem <br> Wartość hidden oznacza: "przytnij wszystko, co wychodzi poza element": <br>
         <code>
-            CSS: <br>
-            .element { <br>
-                padding: 20px; <br>
-                background: yellow; <br>
-                color: red; <br>
-                margin: 20px; <br>
-                width: 200px; <br>
-                height: 200px; <br>
-                overflow: hidden; <br>
-            } <br>
-        </code>
-    </li>
-    <li><code>auto</code> – jeżeli treść się nie mieści pojawią się paski przewijania <br> Wartość auto oznacza: "jeżeli zawartość się nie mieści, pokaż paski przewijania. Jeżeli zawartość się mieści, nie rób nic": <br>
-        <code>
-            CSS: <br>
-            .element { <br>
-                padding: 20px; <br>
-                background: yellow; <br>
-                color: red; <br>
-                margin: 20px; <br>
-                width: 200px; <br>
-                height: 200px; <br>
-                overflow: auto; <br>
-            } <br>
-        </code>
-    </li>
-    <li><code>scroll</code> – paski przewijania są widoczne zawsze <br> Wartość scroll oznacza: „pokaż paski przewijania – bez względu na to, czy zawartość się mieści, czy nie”: <br>
-        <code>
-            CSS: <br>
-            .element { <br>
-                padding: 20px; <br>
-                background: yellow; <br>
-                color: red; <br>
-                margin: 20px; <br>
-                width: 200px; <br>
-                height: 200px; <br>
-                overflow: scroll; <br>
-            } <br>
-        </code>
-    </li>
-    <li><code>visible</code> – domyślna – widoczna poza elementem</li>
-    <li><code>inherit</code> – dziedziczy zachowanie od rodzica</li>
-  </ul>
-  Kontrolowanie 'overflow' dla danych osi, możemy skorzystać z dodatkowych właściwości:<code>overflow-x</code> (pozioma) i <code>overflow-y</code> (pionowa): <br>
-  <code>
-    CSS: <br>
-    .element { <br>
+           CSS: <br>
+           .element { <br>
+           padding: 20px; <br>
+           background: yellow; <br>
+           color: red; <br>
+           margin: 20px; <br>
+           width: 200px; <br>
+           height: 200px; <br>
+           overflow: hidden; <br>
+       } <br>
+   </code>
+</li>
+<li><code>auto</code> – jeżeli treść się nie mieści pojawią się paski przewijania <br> Wartość auto oznacza: "jeżeli zawartość się nie mieści, pokaż paski przewijania. Jeżeli zawartość się mieści, nie rób nic": <br>
+    <code>
+        CSS: <br>
+        .element { <br>
         padding: 20px; <br>
         background: yellow; <br>
         color: red; <br>
         margin: 20px; <br>
         width: 200px; <br>
         height: 200px; <br>
-  
-        overflow: hidden !important; /* wymuszamy schowanie przewijania */ <br>
-        overflow-y: auto !important; /* jeżeli zajdzie potrzeba pojawią się paski na osi Y */ <br>
+        overflow: auto; <br>
     } <br>
-  </code>
-  Przydatność overflow: <br>
-  <ul>
+</code>
+</li>
+<li><code>scroll</code> – paski przewijania są widoczne zawsze <br> Wartość scroll oznacza: „pokaż paski przewijania – bez względu na to, czy zawartość się mieści, czy nie”: <br>
+    <code>
+        CSS: <br>
+        .element { <br>
+        padding: 20px; <br>
+        background: yellow; <br>
+        color: red; <br>
+        margin: 20px; <br>
+        width: 200px; <br>
+        height: 200px; <br>
+        overflow: scroll; <br>
+    } <br>
+</code>
+</li>
+<li><code>visible</code> – domyślna – widoczna poza elementem</li>
+<li><code>inherit</code> – dziedziczy zachowanie od rodzica</li>
+</ul>
+Kontrolowanie 'overflow' dla danych osi, możemy skorzystać z dodatkowych właściwości:<code>overflow-x</code> (pozioma) i <code>overflow-y</code> (pionowa): <br>
+<code>
+    CSS: <br>
+    .element { <br>
+    padding: 20px; <br>
+    background: yellow; <br>
+    color: red; <br>
+    margin: 20px; <br>
+    width: 200px; <br>
+    height: 200px; <br>
+
+    overflow: hidden !important; /* wymuszamy schowanie przewijania */ <br>
+    overflow-y: auto !important; /* jeżeli zajdzie potrzeba pojawią się paski na osi Y */ <br>
+} <br>
+</code>
+Przydatność overflow: <br>
+<ul>
     <li>jeśli rodzicowi nadasz overflow: hidden, jego dzieci nie odsuną go swoimi marginesami</li>
     <li>jeśli rodzicowi nadasz overflow: hidden, możesz nim naprawić problem z floatami</li>
     <li>overflow: hidden może się przydać do ukrywania tekstu na elementach – np. gdy dany element ma tło z tekstem, który nie musi być widoczny w całości</li>
-  </ul>
-  </p>
+</ul>
+</p>
 
-  <h4 id="formularze">Projektowanie formularzy</h4>
-  <p>
+<h4 class="podtytul" id="formularze">Projektowanie formularzy<a class="arrow" href="#spis_tresci">-></a></h4>
+<p>
     Wszystkie pola formularza powinny być objęte elementem 'form', który w HTML służy do definiowania formularza. <br>
     <code>< form>...< /form></code><br>
     Znacznik <code>form</code> może przyjąć kilka atrybutów. Wśród nich wyróżniamy:<br>
@@ -847,233 +854,257 @@
         <li><code>action</code> – wskazuje na adres, na który zostanie wysłany formularz</li>
         <li><code>method</code> – wskazuje metodę, jaką zostanie wysłany formularz (get, post)</li>
     </ul>
-   Przykład: <br>
-   <code>< form action="http://nasza-domena.pl/skrypt-na-serwerze.php" method="get">...< /for></code><br>
-   Elementy formularza - każdy formularz składa się z licznych elementów (kontrolek). Pozwalają one na pobieranie różnych danych od użytkownika. <br>
-   Oto najpopularniejsze typy elementów: <br>
-   <ul>
-    <li><code>input</code> – pole tekstowe do wpisywania treści (może występować w kilku rodzajach)</li>
-    <li><code>radio</code> – pole do wyboru jednej z opcji</li>
-    <li><code>checkbox</code> – pole do wyboru kilku opcji</li>
-    <li><code>textarea</code> – pole do wpisywania dłuższej treści</li>
-    <li><code>select</code> – pole do wyboru opcji</li>
-    <li><code>range</code> – pole do wyboru wartości z zakresu</li>
-    <li><code>button</code> – przyciski w formularzach</li>
+    Przykład: <br>
+    <code>< form action="http://nasza-domena.pl/skrypt-na-serwerze.php" method="get">...< /for></code><br>
+    Elementy formularza - każdy formularz składa się z licznych elementów (kontrolek). Pozwalają one na pobieranie różnych danych od użytkownika. <br>
+    Oto najpopularniejsze typy elementów: <br>
+    <ul>
+        <li><code>input</code> – pole tekstowe do wpisywania treści (może występować w kilku rodzajach)</li>
+        <li><code>radio</code> – pole do wyboru jednej z opcji</li>
+        <li><code>checkbox</code> – pole do wyboru kilku opcji</li>
+        <li><code>textarea</code> – pole do wpisywania dłuższej treści</li>
+        <li><code>select</code> – pole do wyboru opcji</li>
+        <li><code>range</code> – pole do wyboru wartości z zakresu</li>
+        <li><code>button</code> – przyciski w formularzach</li>
     </ul>
     Przykład zastosowania pól: <br>
     <code>
         < form><br>
-            < label for="text">Pole tekstowe< /label><br>
-            < input type="text" id="text" /><br>
+        < label for="text">Pole tekstowe< /label><br>
+        < input type="text" id="text" /><br>
 
-            < label for="email">Pole tekstowe< /label><br>
-            < input type="email" id="email" /><br>
+        < label for="email">Pole tekstowe< /label><br>
+        < input type="email" id="email" /><br>
 
-            < label for="number">Pole tekstowe< /label><br>
-            < input type="number" id="number" /><br>
+        < label for="number">Pole tekstowe< /label><br>
+        < input type="number" id="number" /><br>
 
-            < label for="date">Pole tekstowe< /label><br>
-            < input type="date" id="date" /><br>
+        < label for="date">Pole tekstowe< /label><br>
+        < input type="date" id="date" /><br>
 
-            < label for="url">Pole tekstowe< /label><br>
-            < input type="url" id="url" /><br>
+        < label for="url">Pole tekstowe< /label><br>
+        < input type="url" id="url" /><br>
 
-            < label for="password">Pole tekstowe< /label><br>
-            < input type="password" id="password" /><br>
+        < label for="password">Pole tekstowe< /label><br>
+        < input type="password" id="password" /><br>
 
-            < input type="range" id="range" /><br>
+        < input type="range" id="range" /><br>
 
-            < input type="radio" id="radio" /><br>
-            < label for="range">Pole radio< /label><br>
+        < input type="radio" id="radio" /><br>
+        < label for="range">Pole radio< /label><br>
 
-            < input type="checkbox" id="chk" /><br>
-            < label for="chk">Pole checkbox< /label><br>
+        < input type="checkbox" id="chk" /><br>
+        < label for="chk">Pole checkbox< /label><br>
 
-            < label for="textarea">Pole textarea< /label><br>
-            < textarea id="textarea">< /textarea><br>
+        < label for="textarea">Pole textarea< /label><br>
+        < textarea id="textarea">< /textarea><br>
 
-            < label for="select">Pole select< /label><br>
-            < select id="select"><br>
-                < option>Opcja 1< /option><br>
-                < option>Opcja 2< /option><br>
-                < option>Opcja 3< /option><br>
-            < /select><br>
+        < label for="select">Pole select< /label><br>
+        < select id="select"><br>
+        < option>Opcja 1< /option><br>
+        < option>Opcja 2< /option><br>
+        < option>Opcja 3< /option><br>
+        < /select><br>
 
-            < button type="submit">Wyślij< /button><br>
+        < button type="submit">Wyślij< /button><br>
         </ form><br>
     </code>
     Label - jest to element, w którym opisujemy, co użytkownik powinien wpisać w dane pole. Elementu tego możesz używać na 2 sposoby.<br>
     W pierwszym z nich używamy atrybutu <code>for</code>, gdzie podajemy ID pola, którego dany label się tyczy:<br>
     <code>
         < form><br>
-            < label for="name">Wpisz swoje imię< /label><br>
-            < input type="text" id="name" /><br>
-            < /form><br>
+        < label for="name">Wpisz swoje imię< /label><br>
+        < input type="text" id="name" /><br>
+        < /form><br>
     </code>
     Drugi sposób polega na umieszczeniu tekstu i pola wewnątrz labela:<br>
     <code>
         < form><br>
-            < label><br>
-                Wpisz swoje imię<br>
-                < input type="text" /><br>
-            < /label><br>
+        < label><br>
+        Wpisz swoje imię<br>
+        < input type="text" /><br>
+        < /label><br>
         < /form><br>
     </code>
     Atrybut name - każdy element w formularzu (uniklany w jego zakresie) powinien mieć atrybut <code>name</code>, czyli nazwę pola. Wartość danego pola zostanie wysłana na serwer właśnie pod taką nazwą: <br>
     <code>
         < form><br>
-            < label for="name">Wpisz swoje imię< /label><br>
-            < input type="text" id="name" name="name" /><br>
+        < label for="name">Wpisz swoje imię< /label><br>
+        < input type="text" id="name" name="name" /><br>
 
-            < label for="surname">Wpisz swoje nazwisko< /label><br>
-            < input type="text" id="surname" name="surname" /><br>
+        < label for="surname">Wpisz swoje nazwisko< /label><br>
+        < input type="text" id="surname" name="surname" /><br>
         < /form><br>
     </code>
-  Atrybut placeholder - element dodatkowo wyjaśniający użytkownikowi co i jak ma wpisać w dane pole. Tekst ten zniknie, gdy użytkownik wpisze coś do pola: <br>
-  <code>
-    < form><br>
+    Atrybut placeholder - element dodatkowo wyjaśniający użytkownikowi co i jak ma wpisać w dane pole. Tekst ten zniknie, gdy użytkownik wpisze coś do pola: <br>
+    <code>
+        < form><br>
         < label for="user">Wpisz swoje imię< /label><br>
         < input type="text" id="name" name="name" placeholder="Wpisz swoje imię" /><br>
 
         < label for="surname">Wpisz swoje nazwisko< /label><br>
         < input type="text" id="surname" name="surname" placeholder="Wpisz swoje nazwisko" /><br>
-    < /form><br>
-  </code>
-  Atrybut value - oznacza wartość danego pola, czyli to, co wybrał lub co wpisał w dane pole użytkownik: <br>
-  <code>
-    < form><br>
+        < /form><br>
+    </code>
+    Atrybut value - oznacza wartość danego pola, czyli to, co wybrał lub co wpisał w dane pole użytkownik: <br>
+    <code>
+        < form><br>
         < label for="user">Wpisz swój login< /label><br>
         < input type="text" id="user" name="user" placeholder="Wpisz swój login" value="Paweł" /><br>
 
         < label for="pass">Wpisz swoje hasło< /label><br>
         <   input type="password" id="pass" name="pass" placeholder="Wpisz swoje hasło" value="tajnehaslo" /><br>
-    < /form><br>
-  </code>
-  Pole input - oznacza pojedynczą kontrolkę, którą będzie wypełniał użytkownik. Rodzaj inputa określa jego atrybut <code>type</code>, jest wiele rodzajów inputów:<br>
-  <ul>
-    <li><code>text</code> – pole tekstowe,</li>
-    <li><code>email</code> – pole tekstowe do wpisywania e-maili,</li>
-    <li><code>number</code> – pole do wpisywania tylko liczb,</li>
-    <li><code>date</code> – pole do wpisywania lub wyboru daty,</li>
-    <li><code>url</code> – pole tekstowe do wpisywania adresu www,</li>
-    <li><code>password</code> – pole tekstowe do wpisywania haseł (wpisywany w to pole tekst jest zamieniany na kropki),</li>
-    <li><code>range</code> – pole do wyboru wartości z zakresu,</li>
-    <li><code>color</code> – pole do wyboru koloru.</li>
-  </ul>
-  <code>
-    < label for="text">Pole tekstowe< /label><br>
-    < input type="text" id="text" /><br>
+        < /form><br>
+    </code>
+    Pole input - oznacza pojedynczą kontrolkę, którą będzie wypełniał użytkownik. Rodzaj inputa określa jego atrybut <code>type</code>, jest wiele rodzajów inputów:<br>
+    <ul>
+        <li><code>text</code> – pole tekstowe,</li>
+        <li><code>email</code> – pole tekstowe do wpisywania e-maili,</li>
+        <li><code>number</code> – pole do wpisywania tylko liczb,</li>
+        <li><code>date</code> – pole do wpisywania lub wyboru daty,</li>
+        <li><code>url</code> – pole tekstowe do wpisywania adresu www,</li>
+        <li><code>password</code> – pole tekstowe do wpisywania haseł (wpisywany w to pole tekst jest zamieniany na kropki),</li>
+        <li><code>range</code> – pole do wyboru wartości z zakresu,</li>
+        <li><code>color</code> – pole do wyboru koloru.</li>
+    </ul>
+    <code>
+        < label for="text">Pole tekstowe< /label><br>
+        < input type="text" id="text" /><br>
 
-    < label for="email">Pole email< /label><br>
-    < input type="email" id="email" /><br>
+        < label for="email">Pole email< /label><br>
+        < input type="email" id="email" /><br>
 
-    < label for="number">Pole number< /label><br>
-    < input type="number" id="number" /><br>
+        < label for="number">Pole number< /label><br>
+        < input type="number" id="number" /><br>
 
-    < label for="date">Pole date< /label><br>
-    < input type="date" id="date" /><br>
+        < label for="date">Pole date< /label><br>
+        < input type="date" id="date" /><br>
 
-    < label for="url">Pole url< /label><br>
-    < input type="url" id="url" /><br>
+        < label for="url">Pole url< /label><br>
+        < input type="url" id="url" /><br>
 
-    < label for="password">Pole password< /label><br>
-    < input type="password" id="password" /><br>
+        < label for="password">Pole password< /label><br>
+        < input type="password" id="password" /><br>
 
-    < label for="range">Pole range< /label><br>
-    < input type="range" id="range" /><br>
-  </code>
-  Textarea - element ten służy do wpisywania wieloliniowej treści: <br>
-  <code>
-    < label for="message">Pole textarea< /label><br>
-    < textarea id="message">< /textarea><br>
-  </code>
-  Pole textarea jest wyjątkowym polem – nie ma atrybutu <code>value</code>. Jego wartość powinna pojawić się między otwierającym i zamykającym znacznikiem <code>value</code>:<br>
-  <code>
-    < label for="message">Pole textarea< /label><br>
-    < textarea id="message">Poprzednia wiadomość wpisana przez użytkownika< /textarea><br>
-  </code>
-  Jeżeli chcemy dla tego pola użyć atrybutu <code>placeholder</code>, znacznik otwierający i zamykający muszą znaleźć się obok siebie. Pomiędzy znacznikami nie może znaleźć się nawet "spacja": <br>
-  <code>
-    <!-- tutaj zadziała --><br>
+        < label for="range">Pole range< /label><br>
+        < input type="range" id="range" /><br>
+    </code>
+    Textarea - element ten służy do wpisywania wieloliniowej treści: <br>
+    <code>
+        < label for="message">Pole textarea< /label><br>
+        < textarea id="message">< /textarea><br>
+    </code>
+    Pole textarea jest wyjątkowym polem – nie ma atrybutu <code>value</code>. Jego wartość powinna pojawić się między otwierającym i zamykającym znacznikiem <code>value</code>:<br>
+    <code>
+        < label for="message">Pole textarea< /label><br>
+        < textarea id="message">Poprzednia wiadomość wpisana przez użytkownika< /textarea><br>
+    </code>
+    Jeżeli chcemy dla tego pola użyć atrybutu <code>placeholder</code>, znacznik otwierający i zamykający muszą znaleźć się obok siebie. Pomiędzy znacznikami nie może znaleźć się nawet "spacja": <br>
+    <code>
+        <!-- tutaj zadziała --><br>
         < textarea id="message" placeholder="Wpisz wiadomość">< /textarea><br>
 
-    <!-- tutaj nie zadziała --><br>
+        <!-- tutaj nie zadziała --><br>
         < textarea id="message" placeholder="Wpisz wiadomość"> < /textarea><br>
-  </code>
-  Pole checkbox - charakterystyczny input, który służy do potwierdzania danego wyboru: <br>
-  <code>
-    < form> <br>
+    </code>
+    Pole checkbox - charakterystyczny input, który służy do potwierdzania danego wyboru: <br>
+    <code>
+        < form> <br>
         < label> < input type="checkbox" name="agreement" value="1" /> Wyrażam zgodę < /label>< br /> <br>
         < label> < input type="checkbox" name="orderProduct" value="1" checked /> Zamawiam produkt < /label> <br>
-    < /form> <br>
-  </code>
-  Każde pole powinno mieć swoją wartość <code>value</code> która, jeżeli pole jest zaznaczone, zostanie przesłana na serwer. W powyższym przykładzie drugie pole dostało atrybut <code>checked</code>-dane pole ma być domyślnie zaznaczone oraz atrybuty <code>name</code>-obie wartości trafią na serwer pod innymi nazwami.<br>
-  Pola checkbox mogą też występować w grupach o tej samej nazwie. Dzięki temu użytkownik może wybrać kilka opcji. W przypadku kilku pól o tej samej nazwie warto je pogrupować za pomocą znacznika <code>< fieldset></code>, któremu nadajesz tytuł dla całej grupy za pomocą znacznika <code>< legend></code>: <br>
-  <code>
-    < form><br>
+        < /form> <br>
+    </code>
+    Każde pole powinno mieć swoją wartość <code>value</code> która, jeżeli pole jest zaznaczone, zostanie przesłana na serwer. W powyższym przykładzie drugie pole dostało atrybut <code>checked</code>-dane pole ma być domyślnie zaznaczone oraz atrybuty <code>name</code>-obie wartości trafią na serwer pod innymi nazwami.<br>
+    Pola checkbox mogą też występować w grupach o tej samej nazwie. Dzięki temu użytkownik może wybrać kilka opcji. W przypadku kilku pól o tej samej nazwie warto je pogrupować za pomocą znacznika <code>< fieldset></code>, któremu nadajesz tytuł dla całej grupy za pomocą znacznika <code>< legend></code>: <br>
+    <code>
+        < form><br>
         < fieldset><br>
-            < legend>Wybierz zwierzę< /legend><br>
-            < label> < input type="checkbox" name="pet" value="dog" /> pies < /label>< br /><br>
-            < label> < input type="checkbox" name="pet" value="cat" /> kot < /label>< br /><br>
-            < label> < input type="checkbox" name="pet" value="pig" /> świnka < /label>< br /><br>
-            < label> < input type="checkbox" name="pet" value="hamster" /> chomik < /label>< br /><br>
-            < label> < input type="checkbox" name="pet" value="chicken" /> kura < /label><br>
+        < legend>Wybierz zwierzę< /legend><br>
+        < label> < input type="checkbox" name="pet" value="dog" /> pies < /label>< br /><br>
+        < label> < input type="checkbox" name="pet" value="cat" /> kot < /label>< br /><br>
+        < label> < input type="checkbox" name="pet" value="pig" /> świnka < /label>< br /><br>
+        < label> < input type="checkbox" name="pet" value="hamster" /> chomik < /label>< br /><br>
+        < label> < input type="checkbox" name="pet" value="chicken" /> kura < /label><br>
         < /fieldset><br>
-    < /form><br>
-  </code>
-  Pole radio - podobne do pola checkbox, różnica jest taka, że w danej grupie pól można jednorazowo wybrać tylko jedną opcję: <br>
-  <code>
-    < form><br>
+        < /form><br>
+    </code>
+    Pole radio - podobne do pola checkbox, różnica jest taka, że w danej grupie pól można jednorazowo wybrać tylko jedną opcję: <br>
+    <code>
+        < form><br>
         < fieldset><br>
-            < legend>Wybierz płeć< /legend><br>
-            < label> < input type="radio" name="gender" value="m" /> mężczyzna < /label>< br /><br>
-            < label> < input type="radio" name="gender" value="w" /> kobieta < /label><br>
+        < legend>Wybierz płeć< /legend><br>
+        < label> < input type="radio" name="gender" value="m" /> mężczyzna < /label>< br /><br>
+        < label> < input type="radio" name="gender" value="w" /> kobieta < /label><br>
         < /fieldset><br>
-    < /form><br>
-  </code>
-  Pole select - służy do wybierania opcji z rozwijanego komponentu. Kolejne opcje, z których można wybierać, umieszczamy w znacznikach <code>< option></code>. Każdy option powinien mieć swój atrybut <code>value</code> oraz tekst danej opcji, który będzie wyświetlany po rozwinięciu selecta: <br>
-  <code>
-    < label for="city">Wybierz miasto< /label><br>
-    < select name="city" id="city"><br>
+        < /form><br>
+    </code>
+    Pole select - służy do wybierania opcji z rozwijanego komponentu. Kolejne opcje, z których można wybierać, umieszczamy w znacznikach <code>< option></code>. Każdy option powinien mieć swój atrybut <code>value</code> oraz tekst danej opcji, który będzie wyświetlany po rozwinięciu selecta: <br>
+    <code>
+        < label for="city">Wybierz miasto< /label><br>
+        < select name="city" id="city"><br>
         < option value="-1">Wybierz< /option><br>
         < option value="gdansk">Gdańsk< /option><br>
         < option value="warsaw">Warszawa< /option><br>
         < option value="wroclaw">Wrocław< /option><br>
         < option value="zakopane">Zakopane< /option><br>
-    < /select><br>
-  </code>
-  Domyślnie wybrana jakaś opcja, powinna otrzymać dodatkowy atrybut <code>selected</code>: <br>
-  <code>
-    < label for="city">Wybierz miasto< /label><br>
-    < select name="city" id="city"><br>
+        < /select><br>
+    </code>
+    Domyślnie wybrana jakaś opcja, powinna otrzymać dodatkowy atrybut <code>selected</code>: <br>
+    <code>
+        < label for="city">Wybierz miasto< /label><br>
+        < select name="city" id="city"><br>
         < option value="-1">Wybierz< /option><br>
         < option value="gdansk">Gdańsk< /option><br>
         < option value="warsaw" selected>Warszawa< /option><br>
         < option value="wroclaw">Wrocław< /option><br>
         < option value="zakopane">Zakopane< /option><br>
-    < /select><br>
-  </code>
-  Button - przyciski w formularzach można tworzyć na dwa sposoby.<br>
-  Jeden to zastosowanie elementu <code>input</code>, który otrzyma atrybut <code>type="button"</code>: <br>
-  <code>
-    < input type="button" value="Kliknij" /><br>
-  </code>
-  Drugim, zalecanym, to użycie znacznika <code>< button></code>:<br>
-  <code>
-    < button type="button">Kliknij< /button><br>
-  </code>
-  Zalecenie to wynika z prostego faktu. Między otwierający i zamykający znacznik buttona można wstawiać html – np. <code>span</code> z ikonką wczytywania czy ikonką dla danego przycisku. W przypadku inputa, którego treść podawana jest w atrybucie <code>value</code> – nie ma takiej możliwości:<br>
-  <code>
-    < button type="button">< strong>Kliknij< /strong> ten przycisk< /button><br>
-  </code>
-  Button submit - przycisk do wysyłania formularzy typu <code>submit</code> (może to być <code>input</code> lub <code>button</code>), po kliknięciu takiego przycisku formularz zostanie wysłany: <br>
-  <code>
-    < form><br>
+        < /select><br>
+    </code>
+    Button - przyciski w formularzach można tworzyć na dwa sposoby.<br>
+    Jeden to zastosowanie elementu <code>input</code>, który otrzyma atrybut <code>type="button"</code>: <br>
+    <code>
+        < input type="button" value="Kliknij" /><br>
+    </code>
+    Drugim, zalecanym, to użycie znacznika <code>< button></code>:<br>
+    <code>
+        < button type="button">Kliknij< /button><br>
+    </code>
+    Zalecenie to wynika z prostego faktu. Między otwierający i zamykający znacznik buttona można wstawiać html – np. <code>span</code> z ikonką wczytywania czy ikonką dla danego przycisku. W przypadku inputa, którego treść podawana jest w atrybucie <code>value</code> – nie ma takiej możliwości:<br>
+    <code>
+        < button type="button">< strong>Kliknij< /strong> ten przycisk< /button><br>
+    </code>
+    Button submit - przycisk do wysyłania formularzy typu <code>submit</code> (może to być <code>input</code> lub <code>button</code>), po kliknięciu takiego przycisku formularz zostanie wysłany: <br>
+    <code>
+        < form><br>
         ...<br>
         < button type="submit">Wyślij< /button><br>
-    < /form><br>
-  </code>
-  </p>
+        < /form><br>
+    </code>
+</p>
+
+<h4 class="podtytul" id="relacje">Relacje między elementami HTML<a class="arrow" href="#spis_tresci">-></a></h4> 
+<p> Elementy HTML tworzą pewną hierarchiczną, drzewiastą strukturę przypomninającą drzewo genealogiczne.<br>
+  Elementem nadrzędnym jest znacznik <code>< html></code>.<br>
+  Między poszczególnymi elementami zachodzą relacje rodzic – dziecko, np. element <code>< html></code> jest rodzicem elementów <code>< head></code> i <code>< body></code>.
+  Struktura ta jest częścią modelu DOM (Document Object Model):<br>
+  <img src="DOM.png" width="450" height="300" alt="Document Object Model" title="Document Object Model"> <br>
+  <code>
+    < !doctype html><br>
+    < html lang="pl-PL"><br>
+    < head><br>
+    < title>Prosta strona< /title><br>
+    < /head><br>
+    < body><br>
+    < p>Treść paragrafu< /p><br>
+    < div><br>
+    < strong>Ważny tekst< /strong><br>
+    < em>Inny ważny tekst< /em><br>
+    < p>Następny paragraf< /p><br>
+    < /div><br>
+    < /body><br>
+    < /html><br>
+</code>
+</p>
 
 </body>
 </html>
