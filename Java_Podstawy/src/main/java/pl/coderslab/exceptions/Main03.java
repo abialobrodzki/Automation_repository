@@ -16,14 +16,14 @@ public class Main03 {
     }
 
     static void showLength(String s) {
-//        if (s != null) { // można zabezpieczyć również tak
-//            System.out.println(s.length());
-//        }
-
-        if (s == null) {
-            System.out.println("null value is not allowed");
-        } else {
+        if (s != null) { // można zabezpieczyć również tak
             System.out.println(s.length());
         }
+
+//        if (s == null) {  // wyjątek jest rzucany
+//            System.out.println("null value is not allowed");
+//        } else {
+//            System.out.println(s.length());
+//        }
     }
 }
