@@ -1,7 +1,7 @@
 package pl.coderslab.oop.attributes;
 
 public class AccessModifier {
-    public String publicAttribute;
-    private String privateAttribute;
+    public int publicAttribute;
+    private boolean privateAttribute;
     protected String protectedAttribute;
 }

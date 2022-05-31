@@ -9,8 +9,8 @@ public class Main02 {
 
     public static void main(String[] args) {
         AccessModifier testAttribute = new AccessModifier();
-        testAttribute.protectedAttribute = "xyz";
-        testAttribute.publicAttribute = "abc";
+        testAttribute.protectedAttribute = "xyz"; //string
+        testAttribute.publicAttribute = 101; //int
         System.out.println(testAttribute.protectedAttribute);
         System.out.println(testAttribute.publicAttribute);
 
