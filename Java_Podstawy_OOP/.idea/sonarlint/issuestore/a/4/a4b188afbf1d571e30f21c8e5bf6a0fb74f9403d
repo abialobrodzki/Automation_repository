@@ -1,0 +1,10 @@
+
+M
+java:S1854"7Remove this useless assignment to local variable "dog".(ñŒß
+R
+java:S1854"7Remove this useless assignment to local variable "cat".(÷»Áùÿÿÿÿÿ
+C
+java:S1481"(Remove this unused "cat" local variable.(÷»Áùÿÿÿÿÿ
+>
+java:S1481"(Remove this unused "dog" local variable.(ñŒß
+P	java:S125"<This block of commented-out lines of code should be removed.(à—U

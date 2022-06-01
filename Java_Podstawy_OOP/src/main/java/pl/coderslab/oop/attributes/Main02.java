@@ -18,7 +18,7 @@ public class Main02 {
         System.out.println(testAttribute.publicAttribute);
 
         // dodanie zadania z methods: Main02, Main03, Main04, Main05
-        pl.coderslab.oop.methods.Person person = new Person();
+        Person person = new Person();
         person.setName("Werner");
         System.out.println(person.getName());
         person.setSurname("Heisenberg");

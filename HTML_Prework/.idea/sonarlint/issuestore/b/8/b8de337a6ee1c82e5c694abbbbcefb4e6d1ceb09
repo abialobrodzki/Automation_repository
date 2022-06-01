@@ -1,0 +1,17 @@
+
+LWeb:BoldAndItalicTagsCheck2"!Replace this <b> tag by <strong>.(Êè†ÿùÿÿÿÿ
+CWeb:BoldAndItalicTagsCheck<"Replace this <i> tag by <em>.(Ìï¦¯
+SWeb:FrameWithoutTitleCheck~"-Add a "title" attribute to this <iframe> tag.(¹æÔá
+MWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(Õ¡ïñùÿÿÿÿ
+NWeb:TableWithoutCaptionCheck¦" Add a description to this table.(¿‰˜ÿÿÿÿÿ
+h Web:TableHeaderHasIdOrScopeCheck©";Add either an 'id' or a 'scope' attribute to this <th> tag.(áà«™
+h Web:TableHeaderHasIdOrScopeCheck®";Add either an 'id' or a 'scope' attribute to this <th> tag.(É“š¼
+h Web:TableHeaderHasIdOrScopeCheck¯";Add either an 'id' or a 'scope' attribute to this <th> tag.(ÿåè
+m Web:TableHeaderHasIdOrScopeCheck°";Add either an 'id' or a 'scope' attribute to this <th> tag.(†ê»•şÿÿÿÿ
+m Web:TableHeaderHasIdOrScopeCheck±";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ğ¹ÄÉÿÿÿÿÿ
+m Web:TableHeaderHasIdOrScopeCheck´";Add either an 'id' or a 'scope' attribute to this <th> tag.(‘ Äşÿÿÿÿ
+m Web:TableHeaderHasIdOrScopeCheckÆ";Add either an 'id' or a 'scope' attribute to this <th> tag.(²É½üÿÿÿÿ
+MWeb:BoldAndItalicTagsCheckĞ"!Replace this <b> tag by <strong>.(¾¸»Îúÿÿÿÿ
+IWeb:BoldAndItalicTagsCheckØ"Replace this <i> tag by <em>.(İóÓ‚şÿÿÿÿ
+YWeb:FrameWithoutTitleCheckÙ"-Add a "title" attribute to this <iframe> tag.(æ›–şÿÿÿÿ
+MWeb:ImgWithoutAltCheckÚ"%Add an "alt" attribute to this image.(Ëºâûÿÿÿÿ
