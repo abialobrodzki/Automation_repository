@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class MainIsDisplayed {
-    
+
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
