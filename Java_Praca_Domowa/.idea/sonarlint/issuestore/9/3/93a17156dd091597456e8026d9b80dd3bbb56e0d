@@ -1,0 +1,16 @@
+
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(öëÊ•üÿÿÿÿ8ÒØ‹ò•0
+{	java:S115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(°¬ù÷úÿÿÿÿ8âØ‹ò•0
+g
+java:S1124!"EReorder the modifiers to comply with the Java Language Specification.(°¬ù÷úÿÿÿÿ8Ù‹ò•0
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(±ÏÓš8‘Ù‹ò•0
+g
+java:S17647"JCorrect one of the identical sub-expressions on both sides of operator "-"(ÕÇƒê8‘Ù‹ò•0
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(Åå„Áÿÿÿÿÿ8‘Ù‹ò•0
+Z	java:S106E"9Replace this use of System.out or System.err by a logger.(í¡’Åşÿÿÿÿ8 Ù‹ò•0
+X	java:S125F"<This block of commented-out lines of code should be removed.(ÓêÅæ8 Ù‹ò•0
+X	java:S125H"<This block of commented-out lines of code should be removed.(ÓêÅæ8 Ù‹ò•0
+X	java:S125J"<This block of commented-out lines of code should be removed.(ÓêÅæ8 Ù‹ò•0
+X	java:S125L"<This block of commented-out lines of code should be removed.(ÓêÅæ8 Ù‹ò•0
+X	java:S125N"<This block of commented-out lines of code should be removed.(ÓêÅæ8 Ù‹ò•0
+Z	java:S106Q"9Replace this use of System.out or System.err by a logger.(í¡’Åşÿÿÿÿ8 Ù‹ò•0

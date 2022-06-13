@@ -3,7 +3,7 @@ Test automation repository with Coders Lab courses, included:
 - prework JAVA (first program; variables and operators; flow control; arrays) with automation tests to check tasks in file [Java_Prework] [1] - day 0
 - prework HTML in file [HTML_Prework] [2] - day 0
 - JAVA tasks (algorithms, arrays, debug, exceptions, methods) [Java_Podstawy][3] - day 1/2
-- JAVA OOP Object-Oriented Programming tasks (attributes,constructor,firstclass,inheritance,methods) [Java_Podstawy_OOP] [4] - day 1/2
+- JAVA OOP Object-Oriented Programming tasks (attributes,constructor,firstclass,inheritance,methods) [Java_Podstawy_OOP] [4] - day 1/2 + day 3
 - JAVA tasks (arrays, exceptions, methods, oop) [Java_Praca_Domowa] [5] - day 1/2
 - Selenium Course with Java tasks [SeleniumCourse] [6] - day 3/4
 
