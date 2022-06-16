@@ -24,10 +24,6 @@ h
 k
 ;src/main/java/pl/coderslab/homeworks/exceptions/Main02.java,4\6\46e417f61151ed02d168febb66190ee1d218f517
 k
-;src/main/java/pl/coderslab/homeworks/exceptions/Main05.java,f\c\fcc6a517cfccece406ee18905c9ad78a3bdf7067
-k
-;src/main/java/pl/coderslab/homeworks/exceptions/Main04.java,a\d\ad675ac636acc131a0b77c188a03be8ab193dbec
-k
 ;src/main/java/pl/coderslab/homeworks/exceptions/Main01.java,8\d\8da3736461af10be06bafaaf3ced0df99dd56be4
 k
 ;src/main/java/pl/coderslab/homeworks/exceptions/Main03.java,a\b\abafc655f7d8cbac954a6f200a74d2c5f5dc7be0
@@ -35,5 +31,9 @@ o
 ?src/main/java/pl/coderslab/homeworks/oop/first/BankAccount.java,9\3\93a17156dd091597456e8026d9b80dd3bbb56e0d
 h
 8src/main/java/pl/coderslab/homeworks/oop/first/Book.java,c\7\c792ea99cc269b7085010d869d8567e3bb169fd0
+k
+;src/main/java/pl/coderslab/homeworks/exceptions/Main04.java,a\d\ad675ac636acc131a0b77c188a03be8ab193dbec
+k
+;src/main/java/pl/coderslab/homeworks/exceptions/Main05.java,f\c\fcc6a517cfccece406ee18905c9ad78a3bdf7067
 h
 8src/main/java/pl/coderslab/homeworks/oop/first/User.java,c\5\c5575183eedf3c203a1bbaf076996b3813df5749
