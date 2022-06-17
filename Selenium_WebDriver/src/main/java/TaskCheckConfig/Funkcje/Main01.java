@@ -17,7 +17,7 @@ public class Main01 {
      * - Password
      * Potwierdź rejestrację nowego użytkownika (wcześniej sprawdzając, czy przycisk jest widoczny).
      */
-
+    
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -35,7 +35,7 @@ public class Main01 {
             System.out.println("Element not displayed");
         }
         WebElement lastName = driver.findElement(By.id("customer_lastname"));
-        if (firstName.isDisplayed()) {
+        if (lastName.isDisplayed()) {
             lastName.sendKeys("Super");
         } else {
             System.out.println("Element not displayed");
