@@ -1,0 +1,6 @@
+exercises:
+    '01_Zadanie 1 - By.id': { max_points: 0, disabled: true, translations: { en: '01_Exercise 1 - By.id', pl: '01_Zadanie 1 - By.id' } }
+    '02_Zadanie 2 - By.name': { max_points: 0, disabled: true, translations: { en: '02_Exercise 2 - By.name', pl: '02_Zadanie 2 - By.name' } }
+    '03_Zadanie 3 - By.className': { max_points: 0, disabled: true, translations: { en: '03_Exercise 3 - By.className', pl: '03_Zadanie 3 - By.className' } }
+    '04_Zadanie 4 - By.xpath': { max_points: 0, disabled: true, translations: { en: '04_Exercise 4 - By.xpath', pl: '04_Zadanie 4 - By.xpath' } }
+    '05_Zadanie 5 - By.cssSelector': { max_points: 0, disabled: true, translations: { en: '05_Exercise 5 - By.cssSelector', pl: '05_Zadanie 5 - By.cssSelector' } }

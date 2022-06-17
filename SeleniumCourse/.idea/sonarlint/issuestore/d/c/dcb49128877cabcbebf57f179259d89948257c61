@@ -1,6 +1,0 @@
-
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ñ›œœ
-P
-java:S1128"3Remove this unused import 'org.openqa.selenium.By'.(ÿŠÞ›8¬ó¨™“0
-]
-java:S1128";Remove this unused import 'org.openqa.selenium.WebElement'.(‰ïµ”þÿÿÿÿ8­ó¨™“0

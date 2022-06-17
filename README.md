@@ -5,7 +5,7 @@ Test automation repository with Coders Lab courses, included:
 - JAVA tasks (algorithms, arrays, debug, exceptions, methods) [Java_Podstawy][3] - day 1/2
 - JAVA OOP Object-Oriented Programming tasks (attributes,constructor,firstclass,inheritance,methods) [Java_Podstawy_OOP] [4] - day 1/2 + day 3
 - JAVA tasks (arrays, exceptions, methods, oop) [Java_Praca_Domowa] [5] - day 1/2
-- Selenium Course with Java tasks [SeleniumCourse] [6] - day 3/4
+- Selenium Course with Java tasks [Selenium_WebDriver] [6] - day 3/4
 
 
 ### Przydatne komendy GIT

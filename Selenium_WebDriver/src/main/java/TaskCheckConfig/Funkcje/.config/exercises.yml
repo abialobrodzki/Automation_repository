@@ -1,0 +1,2 @@
+exercises:
+    '01_Zadanie 1': { max_points: 0, disabled: true, translations: { en: '01_Exercise 1', pl: '01_Zadanie 1' } }
