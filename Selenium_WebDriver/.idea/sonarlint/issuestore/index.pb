@@ -9,3 +9,5 @@ n
 >src/main/java/TaskCheckConfig/Wyszukiwanie_elementow/README.md,c\6\c6c1d8fa4fa7a8eda489dbd1feeef18dbc56f60f
 a
 1src/main/java/TaskCheckConfig/Funkcje/Main01.java,4\9\49f635bb105211492bd312db5f8f36fc2bf042af
+f
+6src/main/java/TaskCheckConfig/Funkcje/MainGetText.java,7\3\7315a8cd219e73289ca0d229821412f529d64e7a
