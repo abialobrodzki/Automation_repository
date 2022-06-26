@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ONL_TEA_W_20_Dzien_4_-_Selenium_WebDriver_Praca_domowa" />
+        <module name="ONL_TEA_W_20_Dzien_5_-_Wzorzec_Page_Object_Pattern" />
+        <module name="Selenium_Page-Object-Pattern" />
+        <module name="SeleniumCourse" />
+        <module name="ONL_TEA_W_20_Dzien_4_-_Selenium_WebDriver" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

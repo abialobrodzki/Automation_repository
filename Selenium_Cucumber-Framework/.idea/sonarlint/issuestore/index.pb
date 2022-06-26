@@ -39,3 +39,9 @@ j
 0src/Cucumber/Features/google-text-search.feature,d\0\d070089466ad4eda859bbab1fee529f38c5d88a2
 8
 out.html,3\4\34b434eb4b4f539ec064d3c294f7ae3083f3c42b
+`
+0src/Cucumber/Features/hotel-account-edit.feature,f\8\f80c81d868352a2597843a0045cf69585c02d74e
+i
+9src/test/java/pl/coderslab/hotel/HotelPageObjectTest.java,5\2\52c0930fcd93a9ce7455d322e3890477ae929ac7
+T
+$src/Cucumber/Features/Main01.feature,3\0\306d195014dac384fdd3ffbf4e8f45457f6410c4
