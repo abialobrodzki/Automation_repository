@@ -19,7 +19,8 @@ public class User {
     private String lastName; // nazwisko użytkownika
     private Book[] books; //tablica obiektów klasy Book
 
-    User(int liczbaKsiazek) {
+    public User(int liczbaKsiazek) {
+        super();
         books = new Book[liczbaKsiazek];
     }
 
@@ -35,6 +36,10 @@ public class User {
         this.lastName = lastName;
     }
 
+    public void setBook(Book[] books) {
+        this.books = books;
+    }
+
     public int getId() {
         return id;
     }
@@ -47,11 +52,17 @@ public class User {
         return lastName;
     }
 
+    public Book[] getBook() {
+        return books;
+    }
+
     public String getFullUser() {
         return getId() + " " + getFirstname() + " " + getLastName();
     }
 
     public void addBook(Book book) {
+        books = Arrays.copyOf(books, books.length + 1);
+        books[books.length - 1] = book;
         int rozmiar = 2;
         User[] user = new User[rozmiar];
         user[0] = new User(2);
@@ -63,7 +74,7 @@ public class User {
 
     public static void main(String[] args) {
         Book[] books = new Book[2];
-        Arrays.fill(books, new Book());
+        Arrays.fill(books, null);
         books[0].setId(1001);
         books[0].setTitle("Historia Polski");
         books[0].setAvailable(true);

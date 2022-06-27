@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java-basics-homework" />
-        <module name="Java_Praca_Domowa" />
+        <module name="ONL_TEA_W_20_Podstawy_Java_Praca_Domowa" />
       </profile>
     </annotationProcessing>
   </component>

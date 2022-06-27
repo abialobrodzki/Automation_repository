@@ -17,3 +17,11 @@ c
 3src/test/java/pl/coderslab/hotel/page/AuthPage.java,b\2\b2e5ee1872e53cc51ff6b461c4188290c26f6059
 h
 8src/test/java/pl/coderslab/hotel/page/MyAccountPage.java,5\7\570c139fe2af3743b5b515adea7a314dcdc92634
+h
+8src/test/java/pl/coderslab/hotel/page/RoomsListPage.java,1\5\15cd937dd9b1e8a08e1f54ed80ffd10e3d2db47a
+k
+;src/test/java/pl/coderslab/hotel/HotelRegistrationTest.java,f\0\f0deb93f9079ae4c424a0fbfe497f8789ef45012
+j
+:src/test/java/pl/coderslab/hotel/HotelRoomsSearchTest.java,0\d\0df1a3e0066d536d315a887241e0a151edba3947
+j
+:src/test/java/pl/coderslab/hotel/HotelReservationTest.java,5\6\56dfae76829ff9200cff775ff2ae8b2be84c9b4b

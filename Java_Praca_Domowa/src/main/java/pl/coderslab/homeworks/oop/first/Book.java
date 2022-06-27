@@ -2,7 +2,7 @@ package pl.coderslab.homeworks.oop.first;
 
 import java.util.Arrays;
 
-public class Book {
+public class Book extends Author {
     /**
      * ## Zadanie 2
      * Stwórz klasę `Book`, która ma spełniać następujące wymogi:
@@ -13,7 +13,7 @@ public class Book {
      * z domyślną wartością ustawioną na `true`, książka może być wypożyczona,
      * lub np. w renowacji - ma wtedy atrybut określony na **false**.
      * * `author` - atrybut typu `Author`,
-     * * `additionalAuthors`  - tablica obiektów klasy `Author`.
+     * * `additionalAuthors` - tablica obiektów klasy `Author`.
      * 2. Posiadać gettery do wszystkich pól.
      * 3. Posiadać settery do wszystkich pól.
      **/
@@ -36,6 +36,14 @@ public class Book {
         this.available = available;
     }
 
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public void setAdditionalAuthors(Author[] additionalAuthors) {
+        this.additionalAuthors = additionalAuthors;
+    }
+
     public int getId() {
         return id;
     }
@@ -48,11 +56,31 @@ public class Book {
         return available;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
+    public Author[] getAdditionalAuthors() {
+        return additionalAuthors;
+    }
+
     public String getFullBook() {
         return getId() + " " + getTitle() + " " + getAvailable();
     } //zwraca informacje o książce
 
+    public Book(Author[] additionalAuthors) {
+        this.additionalAuthors = additionalAuthors;
+    }
+
+    public void addAuthor(Author author) {
+        additionalAuthors = Arrays.copyOf(additionalAuthors, additionalAuthors.length + 1);
+        additionalAuthors[additionalAuthors.length - 1] = author;
+    }
+
     public static void main(String[] args) {
+
+        Author[] additionalAuthors = new Author[2];
+        additionalAuthors[0] = new Author();
         Author author = new Author();
         author.setId(1);
         author.setFirstName("Adam");
@@ -61,7 +89,7 @@ public class Book {
         System.out.println(author.getFullAuthor());
         System.out.println("-------------");
 
-        Author[] additionalAuthors = new Author[2];
+        Author[] additionalAuthorsNew = new Author[2];
         Arrays.fill(additionalAuthors, new Author());
         additionalAuthors[0].setId(1);
         additionalAuthors[0].setFirstName("Adam");
