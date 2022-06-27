@@ -25,3 +25,15 @@ k
 ;src/main/java/pl/coderslab/homeworks/exceptions/Main05.java,f\c\fcc6a517cfccece406ee18905c9ad78a3bdf7067
 o
 ?src/main/java/pl/coderslab/homeworks/oop/first/BankAccount.java,9\3\93a17156dd091597456e8026d9b80dd3bbb56e0d
+j
+:src/main/java/pl/coderslab/homeworks/oop/first/Author.java,3\d\3d53a67250e3d7aea691af1540a3a1c098e531ce
+g
+7src/main/java/pl/coderslab/homeworks/arrays/Main03.java,e\7\e7f8c9164d537231af7b1b0b55ac9a081eb3afaa
+k
+;src/main/java/pl/coderslab/homeworks/exceptions/Main01.java,8\d\8da3736461af10be06bafaaf3ced0df99dd56be4
+g
+7src/main/java/pl/coderslab/homeworks/arrays/Main01.java,d\c\dc7a795ac1c83417d31d141b8d060fedcd5cb23b
+h
+8src/main/java/pl/coderslab/homeworks/oop/first/User.java,c\5\c5575183eedf3c203a1bbaf076996b3813df5749
+h
+8src/main/java/pl/coderslab/homeworks/oop/first/Book.java,c\7\c792ea99cc269b7085010d869d8567e3bb169fd0

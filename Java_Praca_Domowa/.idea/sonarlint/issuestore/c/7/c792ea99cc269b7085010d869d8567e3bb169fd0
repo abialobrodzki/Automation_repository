@@ -1,0 +1,14 @@
+
+V
+java:S1161":Add the "@Override" annotation above this method signature(’¹¾
+8ª˜µš0
+\
+java:S1161/":Add the "@Override" annotation above this method signature(»ˆ»¶ùÿÿÿÿ8¢ª˜µš0
+e
+java:S1854\"HRemove this useless assignment to local variable "additionalAuthorsNew".(İ¬¯é8¯ª˜µš0
+U	java:S106Y"9Replace this use of System.out or System.err by a logger.(ıÃÿ²8¤ùŒò•0
+U	java:S106Z"9Replace this use of System.out or System.err by a logger.(™Û¶8¤ùŒò•0
+V
+java:S1481\"9Remove this unused "additionalAuthorsNew" local variable.(İ¬¯é8Æª˜µš0
+Z	java:S106b"9Replace this use of System.out or System.err by a logger.(á‰ë“ıÿÿÿÿ8¤ùŒò•0
+Z	java:S106g"9Replace this use of System.out or System.err by a logger.(İÚÇÙøÿÿÿÿ8¤ùŒò•0
