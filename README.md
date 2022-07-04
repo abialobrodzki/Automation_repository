@@ -8,6 +8,7 @@ Test automation repository with Coders Lab courses, included:
 - Selenium course included Java tasks [Selenium_WebDriver] [6] - day 3/4
 - Selenium tasks with Page Object Pattern (+ JUnit 4) [Selenium_Page-Object-Pattern] [7] - day 5/6
 - Selenium tasks with Cucumber framework (+ Gherkin) [Selenium_Cucumber-Framework] [8] - day 5/6
+- Selenium WebDriver tasks exercises [Selenium_WebDriver_Praca_Domowa] [9] - day 4
 
 
 ### Przydatne komendy GIT
